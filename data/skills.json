@@ -1,0 +1,84 @@
+{
+    "skills": [
+      {
+        "icon":"devicon-python-plain",
+        "title":"Python",
+        "description":"Have created many projects using python. Also, have done certifications and currently enrolled into courses where we are required to build projects using python.",
+        "level":"1"
+        },
+        {
+        "icon":"devicon-cplusplus-plain",
+        "title":"C++",
+        "description":"Have greated major projects using C++ along with unit testing. Have keen understanding of Object Oriented Programming.",
+        "level":"1"
+        },
+        {
+        "icon":"devicon-java-plain",
+        "title":"JAVA",
+        "description":"Have proficiency in solving competetive programming questions using Java",
+        "level":"0.5"
+        },
+        {
+        "icon":"devicon-robot-plain",
+        "title":"ROS",
+        "description":"Worked on multiple projects integrating ROS and ROS2 along with Python and C++. Please checkout the projects!!!",
+        "level":"1"
+        },
+        {
+        "icon":"devicon-git-plain",
+        "title":"GIT",
+        "description":"Have proficiency with version control using Git and Github, have collaborated n projects using Agile Iterative Process and GIT as a platform to implemnet Continuos Integration",
+        "level":"1"
+        },
+        {
+        "icon":"devicon-raspberrypi-line",
+        "title":"Raspberry Pi",
+        "description":"Currently working on building a autonomous robot with pereception capabilities to navigate thrugh obstacle course.",
+        "level":"0.8"
+        },
+        {
+        "icon":"devicon-arduino-plain",
+        "title":"Arduino",
+        "description":"Have worked with arduino to build robots durng undergraduate education.",
+        "level":"0.8"
+        },
+        {
+        "icon":"devicon-opencv-plain",
+        "title":"OpenCV",
+        "description":"Currently enrolled in a course for Robot Perceptions, where we use OpenCV.",
+        "level":"0.8"
+        },
+        {
+        "icon":"devicon-html5-plain",
+        "title":"HTML",
+        "description":"Have sufficient knowledege about HTML to build basic websites",
+        "level":"0.6"
+        },
+        {
+        "icon":"devicon-css3-plain",
+        "title":"CSS",
+        "description":"Have sufficient knowledege about CSS to build basic websites",
+        "level":"0.6"
+        },
+        {
+        "icon":"devicon-javascript-plain",
+        "title":"JavaScipt",
+        "description":"Have sufficient knowledege about JavaScript to build basic websites",
+        "level":"0.6"
+        },
+        {
+        "icon":"devicon-linux-plain",
+        "title":"Linux",
+        "description":"Comfortable working with Linux. Especially, Ubuntu OS.",
+        "level":"1"
+        },
+        {
+        "icon":"devicon-matlab-plain",
+        "title":"MATLAB",
+        "description":"Working on and creating projects in MATLAB to integrate ROS with the MATLAB toolboxes.",
+        "level":"0.6"
+        }
+      
+    ]
+  }
+  

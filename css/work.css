@@ -1,0 +1,58 @@
+
+#work-experience .about-paragraph{
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    font-family: var(--light-font);
+  }
+  
+  
+  .work-description{
+    color: var(--text-color);
+  }
+  
+  #work-experience {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+
+  }
+  
+  #work-experience img {
+    width: 500px;
+    height: 200px;
+  }
+  
+  .work-item {
+    width: 500px;
+    margin: 20px;
+    text-align: left;
+  }
+  .work-item h3{
+    font-size: 25px;
+    color: #f5f5f5;
+  } 
+  
+  .job-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .duration {
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  #workskill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .worktag {
+    background-color: var(--accent-color);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 10px;
+    text-align: center;
+  }
