@@ -17,12 +17,18 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-card li {
+  margin: 2px;
 }
 
 
 .project-card {
   width: 300px;
-  height: 400px;
+  height: 450px;
   margin: 20px;
   padding: 16px;
   border: 1px solid var(--primary-color);
@@ -32,6 +38,7 @@
   display: inline-block;
   background-color: var(--text-color);
   transition: all 0.3s ease-in-out;
+  white-space: wrap;
 
 }
 .project-card:hover {
@@ -118,6 +125,11 @@
   border-bottom: 1px solid #ddd;
 }
 
+.modal-header h2{
+  margin: auto;
+}
+
+
 .modal-body {
   padding: 20px;
   display: flex;
@@ -153,10 +165,15 @@
 .left-column {
   flex-basis: 50%;
   padding: 10px;
-  /* border: 2px solid #ddd; */
-  /* width: 200px; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.left-column img {
+  width: 350px;
+}
 .right-column {
   flex-basis: 50%;
   padding: 30px;
@@ -171,6 +188,8 @@
   border-top: 1px solid #ddd;
 }
 
+
+
 .close {
   position: absolute;
   top: 20px;
@@ -180,28 +199,21 @@
   cursor: pointer;
 }
 
-/* .close-button {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 16px;
-  font-size: 16px;
-  cursor: pointer;
-} */
-
 ul.mtag-list {
   list-style: none;
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 ul.mtag-list li {
-  margin: 0 5px;
+  margin: 5px;
   padding: 5px 10px;
   background-color:var(--primary-color);
   color: #fff;
   border-radius: 20px;
   font-size: 14px;
+  white-space: nowrap;
 }
+

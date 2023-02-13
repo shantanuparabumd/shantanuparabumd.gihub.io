@@ -122,24 +122,6 @@ fetch("data/project-data.json")
   
 
   const skillsContainer = document.getElementById('skills-container');
-// console.log(skillsContainer)
-// fetch('skills.json')
-//   .then(response => response.json())
-//   .then(data => {
-//     data.forEach(skill => {
-//       console.log("Reading Json")
-//       const skillCard = `
-//         <div class="skill-card">
-//           <i class="${skill.icon}"></i>
-//           <h3>${skill.title}</h3>
-//           <p>${skill.description}</p>
-//           <meter value="${skill.meter}" min="0" max="1"></meter>
-//         </div>
-//       `;
-//       skillsContainer.insertAdjacentHTML('beforeend', skillCard);
-//     });
-//   });
-
   fetch('data/skills.json')
   .then((response)=>response.json())
   .then((data)=>{
@@ -168,11 +150,3 @@ fetch("data/project-data.json")
 
     });
   });
-//   const skillCard = `
-//   <div class="skill-card">
-//     <i class="${skill.icon}"></i>
-//     <h3>${skill.title}</h3>
-//     <p>${skill.description}</p>
-//     <meter value="${skill.meter}" min="0" max="1"></meter>
-//   </div>
-// `;

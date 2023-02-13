@@ -2,184 +2,102 @@
   "projects": [
     {
       "id":1,
-      "title":"Swarm Robotics",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
+      "title":"Rescue Robots",
+      "image":"images/project/rescue.jpg",
+      "description":"Swarm of robots that map a unknown area and locate humans in it and plan a path towards the human.",
+      "tags":["ROS","MATLAB","COMPUTER VISON","PATH PLANNING","SLAM"],
+      "github":"https://github.com/shantanuparabumd/Rescue-Robots.git",
+      "video":"",
+      "date":"December 2022",
+      "longDescription":"The system described is a swarm of robots designed to map an unknown area and locate humans within it, using MATLAB, ROS, and Navigation toolboxes to connect with a TurtleBot3 simulation on a remote machine. The main robot is equipped with a lidar scanner and is sent to scan the unknown region, generating an occupancy map using simultaneous localization and mapping (SLAM) techniques. The robot is also equipped with a Computer Vision toolbox in Matlab, allowing it to detect humans within the mapped area. The location of the human is computed from the corresponding depth information of the center of the frame of the detected human. Using frame transformation, the human's location is localized in the map frame, becoming the goal location for other robots in the swarm. The RRT path planner is then used to plan a path between the goal and the robot's current location. Finally, the swarm of robots moves to the goal location using a simple path following algorithm. This system allows for efficient and safe navigation in unknown areas, as well as the location of humans, making it useful in search and rescue operations or other scenarios where humans need to be located and assisted."
       },
       {
       "id":2,
-      "title":"Robots",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
+      "title":"Autonomous Robot",
+      "image":"images/project/prirate.jpg",
+      "description":"Building a Autonomous robot (Pirate 4W) using Raspberry Pi with perception capablities.",
+      "tags":["RASPBERRY PI","OPEN CV","AUTONOMOUS ROBOTICS","PYTHON"],
+      "github":"https://github.com/shantanuparabumd/Autonomous-Robot-809T.git",
+      "video":"",
+      "date":"December 2022",
+      "longDescription":"The Autonomous Robot is built on the Pirate 4WD mobile chassis and controlled using a Raspberry Pi. The robot is propelled by four geared motors, which are operated through an L298N motor driver. The robot's Raspberry Pi camera is mounted on the robot for perception. The robot is also fitted with optical encoders on its motors and uses a BN005 IMU for localization. Additionally, the robot features a gripper, which can pick up objects, and the gripper is actuated using a servo.This robot is designed to detect obstacles in unknown regions and classify them based on their colors. The robot is programmed to pick up only objects of a specific color and transport them to a goal location. The robot has been optimized to pick up the maximum number of target objects while avoiding collisions with obstacles.      Overall, this autonomous robot is a versatile tool that can be used in a variety of applications. Its ability to perceive its environment through its camera and accurately localize itself using its sensors allows it to navigate complex environments with ease. Its gripper and servo allow it to manipulate objects, making it a useful tool for picking up and transporting objects. The robot's ability to classify objects by color allows for efficient sorting and transportation of objects, making it a valuable tool in applications such as warehouse automation and logistics."
       },
       {
       "id":3,
-      "title":"Swarm",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
+      "title":"Swarm Robots",
+      "image":"images/project/swarm.jfif",
+      "description":"Swarm of robots that arage themseleves into geometric patterns",
+      "tags":["ROS2","SWARM ALGORITHMS","GAZEBO","C++"],
+      "github":"https://github.com/jayprajapati009/project_chakravyu.git",
+      "video":"",
+      "date":"December 2022",
+      "longDescription":"In this project, a swarm of TurtleBots is used to demonstrate the use of ROS2 in swarm robotics. The robots start from an initial position and move into a geometric pattern when given a command. The master node generates a goal location for the robots in the network, allowing the system to form patterns of given dimensions for any number of robots without shutting down the system. One of the main challenges of this project was working with ROS2, which is a fairly new technology and lacks documentation. To overcome this challenge, the project was developed using industry-approved software development practices as part of a graduate course. Git was used for code collaboration, and Git CI was used for continuous integration. The Agile iterative process was followed for development, with weekly sprints. Additionally, unit tests were developed using Google Test to ensure the system was functioning properly.  Overall, this project is a testament to the versatility of ROS2 in swarm robotics. By using the TurtleBots, the system was able to demonstrate how multiple robots can work together to accomplish complex tasks. The use of industry-approved software development practices and the Agile iterative process ensures that the system is developed efficiently and effectively. The use of Git and Git CI also allows for collaborative development, making it easier for multiple developers to work on the same codebase. Finally, the use of unit tests ensures that the system is functioning properly, making it more reliable and robust."
       },
       {
       "id":4,
-      "title":"Robots",
+      "title":"Kuka Manipulator",
       "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
+      "description":"Simulation of a Kuka manipulator  using  Gazebo and ROS",
+      "tags":["ROS","SOLIDWORKS","GAZEBO","PYTHON"],
+      "github":"https://github.com/shantanuparabumd/kuka_robot.git",
+      "video":"",
+      "date":"December 2022",
+      "longDescription":"In this project, a Kuka manipulator was designed from scratch using Solidworks as a reference for a Kuka robot. The design was then exported into URDF format, allowing it to be integrated with ROS and simulated in Gazebo. The robot was equipped with joints and motors, allowing it to be controlled using a Python program developed in ROS. The inverse and forward kinematics methods were used to make the robot move in a specific trajectory. However, the team faced challenges with singularities while taking the inverse of the Jacobian. To overcome this issue, the Pseudo Inverse method was used to get the inverse of the Jacobian matrix as a solution. To avoid division by zero errors, the transformation matrix elements were populated with infinitesimally small values rather than zero. Despite these challenges, the robot was able to move in a specified trajectory. One limitation of the project was that it did not account for collisions between the robot's links. This could be solved by using an inverse kinematics solver with a collision matrix. Despite this limitation, the project demonstrates the versatility of ROS and its ability to integrate with other tools such as Solidworks and Gazebo. It also highlights the importance of problem-solving and using alternative solutions to overcome challenges. Overall, this project provides a solid foundation for future projects involving robotic manipulators and ROS."
       },
       {
       "id":5,
-      "title":"Swarm",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
+      "title":"Trajectory of Panda",
+      "image":"images/project/pada.jpg",
+      "description":"Visualization of trajectory of Panda manipulator using Inverse and Forward Kinematics",
+      "tags":["PYTHON","MATPLOTLIB","MODELLING"],
+      "github":"https://github.com/shantanuparabumd/Panda-Robot.git",
+      "video":"",
+      "date":"December 2022",
+      "longDescription":"During our project, we aimed to gain a thorough understanding of the principles behind modelling a robotics manipulator. To achieve this, we decided to create a simple visualization using Python and the Matplotlib library. Our main goal was to track the trajectory of the end effector of a Panda Emica robotic manipulator. To start, we formulated the DH parameter table for the robot and then moved onto the forward and inverse kinematics. As part of the project, we imagined that the robot's end effector had a pen attached to it and our task was to draw a circle on a wall at a specific distance with a designated force, diameter, and center location. To complete this task, we used the Euler-Lagrange dynamics to calculate the torque on each joint. Once we had completed the calculations, we made a 3D plot of the trajectory of the pen to check if it accurately followed a circular path. Next, we plotted all of the vital information as graphs in Matplotlib. By examining the graphs, we were able to make inferences about the behavior of the robot. We used the information we gathered to improve our understanding of robotics manipulators and gained insight into how to model their movements accurately."
       },
       {
       "id":6,
-      "title":"Robots",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
+      "title":"Roomba",
+      "image":"images/project/turtle.png",
+      "description":"Simulation of a cleaner robot in Gazebo using ROS2",
+      "tags":["ROS2","GAZEBO"],
+      "github":"https://github.com/shantanuparabumd/roomba.git",
+      "video":"",
+      "date":"December 2022",
+      "longDescription":"For my project, I repurposed a basic Turtlebot3 robot to function as a Roomba cleaner. To achieve this, I added a depth camera plugin to the robot, which allowed it to detect objects in its environment. The simulation was carried out in Gazebo, while the robot was controlled using ROS2. The robot was designed to use its Lidar and depth sensor to identify and avoid obstacles while cleaning the room. The Lidar was used to detect obstacles on the ground level, while the depth sensor helped the robot navigate its way around furniture and other objects in the room. By simulating the robot in Gazebo, I was able to test and refine its movements in a controlled environment before deploying it to the real world. Additionally, by using ROS2 to control the robot, I was able to easily modify its behavior and incorporate more advanced functionality if required. Overall, this project demonstrated the potential of using robotics to perform everyday tasks such as cleaning, and highlighted the usefulness of simulation and ROS2 in developing and testing these types of systems."
       },
       {
       "id":7,
-      "title":"Swarm",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
+      "title":"Valgrind",
+      "image":"images/project/valgrind.png",
+      "description":"Code optimization and debugging using Valgrind",
+      "tags":["C++","VALGRIND"],
+      "github":"https://github.com/shantanuparabumd/Valgrind.git",
+      "video":"",
+      "date":"December 2022",
+      "longDescription":"The project was undertaken with the aim of improving the understanding of Valgrind and its effectiveness in software development. Valgrind is an open-source tool designed to identify memory leaks, buffer overflows, and other programming errors that could lead to system crashes. The project involved exploring the various features of Valgrind and analyzing its usefulness in ensuring robust and fail-proof software systems. The project highlighted the importance of effective debugging to identify and rectify coding errors. The team found that Valgrind was an effective tool for debugging C and C++ programs as it provided detailed information about memory errors and other issues, including uninitialized variables, incorrect pointer use, and memory leaks. The team also found that Valgrind could identify performance issues such as cache usage, thread synchronization errors, and resource utilization. These features enabled the team to optimize their code and make it more efficient. One of the key advantages of Valgrind is its versatility. It can be used with a wide range of programming languages and platforms, including Linux and macOS. Additionally, Valgrind can be integrated with other debugging tools, such as GDB, to further enhance its capabilities. Overall, the project demonstrated the usefulness of Valgrind as a debugging tool and emphasized the importance of effective debugging in ensuring the robustness and reliability of software systems."
       },
       {
       "id":8,
-      "title":"Robots",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
+      "title":"ROS2 Tutorials",
+      "image":"images/project/ros2.png",
+      "description":"Implementation of ROS2 concepts.",
+      "tags":["C++","ROS2"],
+      "github":"https://github.com/shantanuparabumd/beginner_tutorials.git",
+      "video":"",
+      "date":"December 2022",
+      "longDescription":"For my coursework project, I decided to focus on implementing different ROS2 features, such as publishers, subscribers, services, actions, etc. I aimed to increase my understanding of ROS2 by creating simple projects that allowed me to work with these features and improve my skills. Additionally, I wrote unit tests for my projects using gtest in C++ to ensure that my code was of high quality. Throughout the project, I learned a great deal about the various components of ROS2 and how they interact with each other. I found that implementing different features helped me understand how they could be used in practical applications, such as creating a simple navigation system for a robot. By writing unit tests using gtest, I was able to ensure that my code was of high quality and robust. This process allowed me to catch errors and bugs early in the development process, which saved me time and effort in the long run. Overall, this project was a great way for me to improve my understanding of ROS2 and gain hands-on experience with its features. I feel that the skills I gained through this project will be useful in my future coursework and career in robotics."
       },
       {
       "id":9,
-      "title":"Swarm",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
-      },
-      {
-      "id":10,
-      "title":"Robots",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
-      },
-      {
-      "id":11,
-      "title":"Swarm",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
-      },
-      {
-      "id":12,
-      "title":"Robots",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
-      },
-      {
-      "id":13,
-      "title":"Swarm",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
-      },
-      {
-      "id":14,
-      "title":"Robots",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
-      },
-      {
-      "id":15,
-      "title":"Swarm",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
-      },
-      {
-      "id":16,
-      "title":"Robots",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
-      },
-      {
-      "id":17,
-      "title":"Swarm",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
-      },
-      {
-      "id":18,
-      "title":"Robots",
-      "image":"images/project/kuka.png",
-      "description":"Some Random Content",
-      "tags":["deepika","deepika","deepika"],
-      "github":"deepika",
-      "video":"deepika",
-      "longDescription":"Coffee is a morning ritual for many people, providing a daily dose of caffeine and warmth to start the day."
+      "title":"ROS Toy Car",
+      "image":"images/project/gazebo.jfif",
+      "description":"Design and simulation of toy car in Gazebo using ROS",
+      "tags":["PYTHON","ROS2","GAZEBO"],
+      "github":"https://github.com/shantanuparabumd/toy_car.git",
+      "video":"",
+      "date":"December 2022",
+      "longDescription":"As part of a modeling project, I designed a toy car using SolidWorks and then exported it into URDF for simulation in Gazebo. To integrate motors and joints on the car, I used ROS and then controlled it using a Python code to steer the robot using the keyboard. This project allowed me to apply my SolidWorks skills in a practical way and get hands-on experience with designing and simulating robotic systems. I found that the integration of ROS into the project made it much easier to control the car's movements and provided more flexibility in terms of programming. One of the key challenges I faced during the project was ensuring that the robot's movements were smooth and realistic. To overcome this challenge, I experimented with different control algorithms and tuning parameters until I achieved the desired result. The Python code used to steer the robot using the keyboard was straightforward and easy to implement. This allowed me to quickly test and iterate on my designs, making the development process much more efficient. Overall, this project was a great way for me to gain practical experience with designing and simulating robotic systems. The combination of SolidWorks, URDF, Gazebo, and ROS provided a comprehensive set of tools that allowed me to create a functional and realistic toy car."
       }
-
   ]
 }
