@@ -1,9 +1,12 @@
 
 :root {
-  --primary-color: #4E9F3D;
-  --background-color: #191A19;
-  --text-color: #D8E9A8;
-  --accent-color: #1E5128;
+  --primary-color: #5DB7DE;
+  --background-color: #F1E9DB;
+  --text-color: #07020D;
+  --accent-color: #2660A4;
+  --details-color: #0DBF6F;
+  --premium: #F2CD5D;
+  --card: #FFFFFF;
   --dark-font: 'Roboto', sans-serif;
   --light-font: 'Arial', sans-serif;
 }
@@ -71,11 +74,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--background-color);
+  background-color: var(--accent-color);
   color: #fff;
   padding: 20px;
   font-size: 24px;
-  border-bottom: 5px solid var(--primary-color);
+  border-bottom: 5px solid var(--text-color);
 }
 
 header h1{

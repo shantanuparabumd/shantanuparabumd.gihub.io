@@ -1,8 +1,8 @@
 #about {
-  background-color: var(--accent-color);
+  background-color: var(--background-color);
   color: #f5f5f5;
   /* padding: 50px 0; */
-  background-image: url("../images/background/back2.png");
+  /* background-image: url("../images/background/back2.png"); */
   background-size: contain;
   height: 100vh;
   font-size: 40px;
@@ -29,7 +29,7 @@
   align-items: center;
   margin: 0 auto;
   text-align: center;
-  background-color: #000000d8;
+  background-color: #fcfcfcd8;
   /* padding-top: 200px; */
   border-radius: 10px;
   width: 1000px;
@@ -68,6 +68,52 @@
   font-size: 65px;
 }
 .intro2{
-  color: white;
+  color: var(--premium);
   font-size: 65px;
 }
+
+.carousel {
+  width: 80%;
+  margin: 0 auto;
+}
+/* 
+.slick-prev, .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  transform: translate(0,-50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: white;
+}
+
+.slick-prev {
+  left: -25px;
+}
+
+.slick-prev:before {
+  content: '<';
+}
+
+.slick-next {
+  right: -25px;
+}
+
+.slick-next:before {
+  content: '>';
+} */

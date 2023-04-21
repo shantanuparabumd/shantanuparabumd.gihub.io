@@ -4,6 +4,7 @@
     border: 1px solid var(--primary-color);
     border-radius: 10px;
     font-family: var(--light-font);
+    background-color: var(--card);
   }
   
   
@@ -29,17 +30,19 @@
   }
   .work-item h3{
     font-size: 25px;
-    color: #f5f5f5;
+    color: var(--primary-color);
   } 
   
   .job-title {
     font-weight: bold;
     margin-bottom: 10px;
+    color: var(--premium);
   }
   
   .duration {
     font-style: italic;
     margin-top: 10px;
+    color: var(--details-color);
   }
   
   #workskill-tags {

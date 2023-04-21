@@ -7,7 +7,7 @@
   }
   
   .education-card {
-    background-color: var(--background-color);
+    background-color: var(--card);
     border-radius: 5px;
     border: 1px solid var(--primary-color);
     margin: 20px;
@@ -45,7 +45,7 @@
   .education-info p {
     font-size: 16px;
     margin-bottom: 5px;
-    color: var(--primary-color);
+    color: var(--details-color);
   }
   
 .gpa p {
@@ -58,3 +58,5 @@
     margin-bottom: 5px;
     color: var(--text-color);
   }
+
+  

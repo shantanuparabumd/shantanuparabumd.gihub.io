@@ -21,6 +21,7 @@ fetch("data/project-data.json")
       card.appendChild(title);
 
       const description = document.createElement("p");
+      description.classList.add("desc")
       description.textContent = project.description;
       card.appendChild(description);
 
@@ -33,6 +34,7 @@ fetch("data/project-data.json")
       });
 
       const date = document.createElement("p");
+      date.classList.add("date");
       date.textContent = project.date;
       card.appendChild(date);
 
@@ -148,5 +150,16 @@ fetch("data/project-data.json")
       
       skillsContainer.appendChild(skill_card);
 
+    });
+  });
+  $(document).ready(function(){
+    $('.carousel').slick({
+      autoplay: true,
+      autoplaySpeed: 3000,
+      dots: true,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear'
     });
   });
