@@ -12,7 +12,7 @@
 
 
 .skill-card {
-  width: 300px; /* adjust as needed */
+  width: 200px; /* adjust as needed */
   margin-bottom: 20px; /* adjust as needed */
   text-align: center;
   margin: 20px;
@@ -42,11 +42,11 @@ meter {
 }
 
 meter::-webkit-meter-bar {
-  background: var(--accent-color);
+  background: var(--background-color);
 }
 
 meter::-webkit-meter-optimum-value {
-  background:var(--primary-color);
+  background:var(--premium);
 }
 
 

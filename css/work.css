@@ -1,61 +1,80 @@
 
 #work-experience .about-paragraph{
-    padding: 20px;
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
-    font-family: var(--light-font);
-    background-color: var(--card);
-  }
-  
-  
-  .work-description{
-    color: var(--text-color);
-  }
-  
-  #work-experience {
-    background-color: var(--background-color);
-    color: var(--primary-color);
+  padding: 20px;
+  /* border: 1px solid var(--primary-color);
+  border-radius: 10px; */
+  font-family: var(--light-font);
+  background-color: var(--card);
+}
 
+
+.work-description{
+  color: var(--text-color);
+}
+
+#work-experience {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+
+}
+
+#work-experience img {
+  width: 500px;
+  height: 200px;
+}
+
+.work-item {
+  width: 500px;
+  margin: 20px;
+  text-align: left;
+}
+.work-item h3{
+  font-size: 25px;
+  color: var(--primary-color);
+} 
+
+.job-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--premium);
+}
+
+.duration {
+  font-style: italic;
+  margin-top: 10px;
+  color: var(--details-color);
+}
+
+#workskill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.worktag {
+  background-color: var(--accent-color);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+}
+  body, main, section {
+      background-color: #1C1C1C !important;
+      color: #FFFFFF !important;
+  }
+
+  p, a, h1, h2, h3, h4, h5, h6, div, span, li {
+      color: #FFFFFF !important;
+  }
+
+  .intro-section, .about-paragraph, .work-item, .education-card {
+      background-color: #2C2C2C !important;
+      /* box-shadow: 0 0 15px #00FFFF; */
+  }
+
+
+  hr {
+      border-color: #00FFFF !important;
   }
   
-  #work-experience img {
-    width: 500px;
-    height: 200px;
-  }
-  
-  .work-item {
-    width: 500px;
-    margin: 20px;
-    text-align: left;
-  }
-  .work-item h3{
-    font-size: 25px;
-    color: var(--primary-color);
-  } 
-  
-  .job-title {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: var(--premium);
-  }
-  
-  .duration {
-    font-style: italic;
-    margin-top: 10px;
-    color: var(--details-color);
-  }
-  
-  #workskill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .worktag {
-    background-color: var(--accent-color);
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    border-radius: 8px;
-    margin: 10px;
-    text-align: center;
-  }

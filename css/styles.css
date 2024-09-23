@@ -1,12 +1,12 @@
 
 :root {
-  --primary-color: #5DB7DE;
-  --background-color: #F1E9DB;
-  --text-color: #07020D;
-  --accent-color: #2660A4;
-  --details-color: #0DBF6F;
-  --premium: #F2CD5D;
-  --card: #FFFFFF;
+  --primary-color: #00FFFF;
+  --background-color: #1C1C1C;
+  --text-color: #FF69B4 ;
+  --accent-color: #39FF14;
+  --details-color: #FF69B4;
+  --premium: #39FF14;
+  --card: #333333;
   --dark-font: 'Roboto', sans-serif;
   --light-font: 'Arial', sans-serif;
 }
@@ -128,28 +128,6 @@ footer {
   font-size: 14px;
 }
 
-.resume-button {
-  background-color: var(--accent-color);
-  border: 1px solid white;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.resume-button:hover {
-  background-color: var(--primary-color);
-}
-
-.resume-button a {
-  color: #fff;
-  text-decoration: none;
-}
-
 button {
   display: inline-block;
   padding: 10px 20px;
@@ -163,7 +141,7 @@ button {
 }
 
 button:hover {
-  background-color: #0062a2;
+  background-color: #FF69B4;
 }
 
 
@@ -189,3 +167,92 @@ button:hover {
 
 
 
+
+/* Dark Mode Styling */
+body {
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    font-family: 'Source Code Pro', monospace;
+}
+
+header {
+    background-color: #000000;
+    color: #00FFFF;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 10px #00FFFF;
+}
+
+header a {
+    color: #00FFFF;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+header a:hover {
+    color: #39FF14;
+}
+
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 10px #00FFFF;
+}
+
+/* Neon Effect */
+.neon-text {
+    color: #39FF14;
+    text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #00FFFF, 0 0 40px #00FFFF;
+}
+
+.neon-button {
+    background-color: transparent;
+    border: 2px solid #00FFFF;
+    color: #00FFFF;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #00FFFF;
+}
+
+.neon-button:hover {
+    background-color: #00FFFF;
+    color: #000000;
+    box-shadow: 0 0 20px #00FFFF, 0 0 30px #00FFFF;
+}
+
+.neon-input {
+    background-color: transparent;
+    border: 2px solid #00FFFF;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    width: 80%;
+    box-shadow: 0 0 10px #00FFFF;
+}
+
+.neon-input:focus {
+    outline: none;
+    box-shadow: 0 0 20px #00FFFF;
+}
+
+.contact-container a {
+    color: #00FFFF;
+    text-decoration: none;
+}
+
+.contact-container a:hover {
+    color: #39FF14;
+}
+
+section {
+    padding: 40px;
+    border-bottom: 1px solid #2C3E50;
+}
+
+hr {
+    border-color: #00FFFF;
+}

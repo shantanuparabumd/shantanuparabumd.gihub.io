@@ -163,3 +163,15 @@ fetch("data/project-data.json")
       cssEase: 'linear'
     });
   });
+
+  // Simple background image change logic
+  const banner = document.getElementById('image-banner');
+  const images = ['../images/background/back.png', '../images/background/back2.png']; // Replace with your image paths
+  let currentIndex = 0;
+
+  function changeBackgroundImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      banner.style.backgroundImage = `url(${images[currentIndex]})`;
+  }
+
+  setInterval(changeBackgroundImage, 3000); // Change image every 3 seconds

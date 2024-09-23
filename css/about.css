@@ -1,119 +1,80 @@
-#about {
-  background-color: var(--background-color);
-  color: #f5f5f5;
-  /* padding: 50px 0; */
-  /* background-image: url("../images/background/back2.png"); */
-  background-size: contain;
+/* Full Page Background Section */
+#image-banner {
+  width: 100%;
   height: 100vh;
-  font-size: 40px;
+  background-image: url('../images/background/back.png'); /* Default image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: background-image 1s linear;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
-#about .about-paragraph {
-  display: flex;  
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-  padding: 30px;
-}
 
-.intro-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  text-align: center;
-  background-color: #fcfcfcd8;
-  /* padding-top: 200px; */
-  border-radius: 10px;
-  width: 1000px;
-  height: 500px;
-}
-#about .about-paragraph p {
-  /* margin-bottom: 20px; */
-  color: var(--text-color);
-  font-size: 26px;
-  
-}
-
-
-
+/* About Section on top of the banner */
 .about-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.about-text {
-  max-width: 50%;
-  margin: 50px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1.5), rgba(0, 0, 0, 0.1)); /* Dark to transparent gradient */
   padding: 50px;
-}
-
-.about-image {
-  max-width: 50%;
-  margin: 50px;
-  padding: 50px;
-}
-
-.intro{
-  color: var(--primary-color);
-  font-size: 65px;
-}
-.intro2{
-  color: var(--premium);
-  font-size: 65px;
-}
-
-.carousel {
-  width: 80%;
-  margin: 0 auto;
-}
-/* 
-.slick-prev, .slick-next {
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  transform: translate(0,-50%);
-  cursor: pointer;
-  color: transparent;
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.slick-prev:before, .slick-next:before {
-  font-family: 'slick';
-  font-size: 20px;
-  line-height: 1;
-  opacity: .75;
+  width: 100%; /* Left half of the page */
   color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 70%; /* Occupy most of the screen height */
+  border-radius: 15px;
 }
 
-.slick-prev {
-  left: -25px;
+/* About Content Inside */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Vertical alignment (start at top) */
+  align-items: flex-start; /* Horizontal alignment (aligns to the left) */
+  width: 40%;
 }
 
-.slick-prev:before {
-  content: '<';
+.about-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
-.slick-next {
-  right: -25px;
+.about-content p {
+  font-size: 24px;
+  line-height: 1.6;
+  color: #FFFFFF;
 }
 
-.slick-next:before {
-  content: '>';
-} */
+/* Download Resume Button */
+.resume-button {
+  align-self: flex-start;
+  background-color: transparent;
+  border: 2px solid #FF69B4; /* Neon Pink Border */
+  color: #FF69B4;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 0 10px #FF69B4;
+  transition: all 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #FF69B4;
+  color: #000000;
+  box-shadow: 0 0 20px #FF69B4;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .about-section {
+      width: 80%;
+      height: auto;
+  }
+
+  .about-content h1 {
+      font-size: 36px;
+  }
+
+  .about-content p {
+      font-size: 18px;
+  }
+}

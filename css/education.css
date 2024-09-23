@@ -59,4 +59,22 @@
     color: var(--text-color);
   }
 
-  
+    body, main, section {
+        background-color: #1C1C1C !important;
+        color: #FFFFFF !important;
+    }
+
+    p, a, h1, h2, h3, h4, h5, h6, div, span, li {
+        color: #FFFFFF !important;
+    }
+
+    .intro-section, .about-paragraph, .work-item, .education-card {
+        background-color: #2C2C2C !important;
+        box-shadow: 0 0 15px #00FFFF;
+    }
+
+
+    hr {
+        border-color: #00FFFF !important;
+    }
+    
