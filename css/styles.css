@@ -1,0 +1,132 @@
+
+:root {
+    --primary-color: #FF69B4; /* Neon pink */
+    --secondary-color: #2C2C2C; /* Dark background */
+    --background-color: #1F1F1F; /* Dark background for body */
+    --text-color: #FFFFFF; /* White text */
+    --hover-color: #FF69B4; /* Neon pink hover */
+    --hover-text-color: #000000; /* Black text on hover */
+    --shadow-color: rgba(0, 0, 0, 0.3); /* Box shadow */
+    --tag-bg-color: rgba(255, 105, 180, 0.2); /* Light pink tag background */
+    --tag-hover-bg-color: #FF69B4; /* Neon pink on hover */
+    --border-radius: 8px; /* Default border-radius for elements */
+}
+
+/* Body and General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+/* Buttons */
+button {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: var(--border-radius);
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--hover-text-color);
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual Contact Item */
+.contact-item {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+    word-break: break-all;
+}
+
+/* Icons in the Contact Links */
+.contact-item a i {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.contact-item:hover a {
+    color: var(--primary-color);
+}
+
+.contact-item:hover i {
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-item {
+        width: 100%;
+    }
+
+    #contact h2 {
+        font-size: 2rem;
+    }
+}

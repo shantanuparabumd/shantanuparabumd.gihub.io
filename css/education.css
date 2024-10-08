@@ -52,26 +52,26 @@
     z-index: 2; /* Content above gradient */
     padding: 30px;
     width: 50%; /* Text takes 50% of the card */
-    color: #FFFFFF;
+    color: var(--text-color); /* White text */
 }
 
 .education-info-left h3, .education-info-right h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #FF69B4; /* Neon pink */
+    color: var(--secondary-color); /* Neon pink */
 }
 
 .education-info-left p, .education-info-right p {
     font-size: 16px;
     line-height: 1.6;
-    color: #FFFFFF;
+    color: var(--text-color); /* White text */
 }
 
 /* GPA Styling */
 .gpa {
     margin-top: 10px;
     font-weight: bold;
-    color: #00FFFF; /* Neon blue for GPA */
+    color: var(--primary-color); /* Neon blue for GPA */
 }
 
 /* Responsive Design for Smaller Screens */

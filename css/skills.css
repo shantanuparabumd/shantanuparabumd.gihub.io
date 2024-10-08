@@ -14,13 +14,13 @@
 
 /* Skill Card Styling */
 .skill-card {
-    background-color: #2C2C2C; /* Dark background for the card */
+    background-color: var(--navbar-bg-color); /* Dark background for the card */
     border-radius: 15px;
     width: 250px; /* Fixed width for each card */
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    box-shadow: 0 4px 8px var(--shadow-color); /* Subtle shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #FFFFFF; /* White text for readability */
+    color: var(--text-color); /* White text for readability */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -30,27 +30,27 @@
 /* Hover effect for skill card */
 .skill-card:hover {
     transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+    box-shadow: 0 6px 12px var(--shadow-color); /* Increased shadow on hover */
 }
 
 /* Skill Icon */
 .skill-card i {
     font-size: 40px;
-    color: #FF69B4; /* Neon pink icon */
+    color: var(--secondary-color); /* Neon pink icon */
     margin-bottom: 15px;
 }
 
 /* Skill Title */
 .skill-card h3 {
     font-size: 20px;
-    color: #00FFFF; /* Neon blue for skill title */
+    color: var(--primary-color); /* Neon blue for skill title */
     margin-bottom: 10px;
 }
 
 /* Skill Description */
 .skill-card p {
     font-size: 14px;
-    color: #BBBBBB; /* Light gray for description */
+    color: #BBBBBB; /* Light gray for description - Suggest adding this as --muted-text-color */
     margin-bottom: 20px;
 }
 
@@ -58,24 +58,24 @@
 .skill-card meter {
     width: 100%; /* Full width */
     height: 10px; /* Thin meter */
-    background-color: #444; /* Background for the meter track */
+    background-color: #444; /* Background for the meter track - Suggest adding as --meter-bg-color */
     border-radius: 5px; /* Rounded corners */
     border: none;
 }
 
 /* Meter filled portion (based on skill level) */
 .skill-card meter::-webkit-meter-bar {
-    background-color: #444; /* Track background color */
+    background-color: var(--meter-bg-color); /* Track background color */
     border-radius: 5px;
 }
 
 .skill-card meter::-webkit-meter-optimum-value {
-    background-color: #00FFFF; /* Neon blue for filled portion */
+    background-color: var(--primary-color); /* Neon blue for filled portion */
     border-radius: 5px;
 }
 
 .skill-card meter::-moz-meter-bar {
-    background-color: #00FFFF; /* Neon blue for filled portion in Firefox */
+    background-color: var(--primary-color); /* Neon blue for filled portion in Firefox */
     border-radius: 5px;
 }
 

@@ -31,13 +31,14 @@
     position: relative;
     z-index: 2; /* Place content above the gradient */
     max-width: 600px; /* Limit the width of the text content */
-    color: #FFFFFF; /* Ensure text is white and readable */
+    color: var(--text-color); /* White text for readability */
 }
 
 /* About Content - Heading */
 .about-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    color: var(--text-color); /* White heading */
 }
 
 /* About Content - Paragraph */
@@ -45,6 +46,7 @@
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
+    color: var(--text-color); /* White paragraph text */
 }
 
 /* Download Resume Button */
@@ -61,7 +63,7 @@
 /* Resume Button - Hover Effect */
 .resume-button:hover {
     background-color: var(--primary-color); /* Neon blue background on hover */
-    color: #000000; /* Black text on hover */
+    color: var(--hover-text-color); /* Black text on hover */
     box-shadow: 0 0 10px var(--primary-color); /* Neon glow effect */
 }
 

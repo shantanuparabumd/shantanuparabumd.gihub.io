@@ -1,12 +1,14 @@
-/* Define global variables in :root */
 :root {
     --primary-color: #00FFFF;   /* Neon Blue */
     --secondary-color: #FF69B4; /* Neon Pink */
     --background-color: #1C1C1C; /* Dark Background */
     --navbar-bg-color: #2C2C2C;  /* Navbar and footer background */
     --text-color: #FFFFFF;  /* Default text color */
-    --font-family: 'Arial', sans-serif; /* Default font family */
+    --muted-text-color: #BBBBBB; /* Light gray for muted text */
+    --meter-bg-color: #444; /* Meter track background */
+    --shadow-color: rgba(0, 0, 0, 0.3); /* Subtle shadow for elements */
 }
+
 
 /* Global Styles */
 * {

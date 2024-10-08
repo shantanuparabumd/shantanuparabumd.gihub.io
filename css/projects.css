@@ -1,8 +1,7 @@
-
 #projects-heading {
     text-align: center;
     font-size: 2.5rem;
-    color: #FF69B4;
+    color: var(--secondary-color); /* Neon pink */
     margin: 20px 0;
 }
 
@@ -30,13 +29,13 @@
 
 /* Project Card */
 .project-card {
-    background-color: #2C2C2C;
+    background-color: var(--navbar-bg-color); /* Dark background for cards */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
-    color: #FFFFFF;
+    color: var(--text-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -47,16 +46,15 @@
 .project-card .date {
     font-size: 0.9rem;
     font-weight: bold;
-    /* background-color: rgba(255, 105, 180, 0.2); Light pink background */
-    color: #FF69B4; /* Neon pink text */
+    background-color: rgba(255, 105, 180, 0.2); /* Light pink background */
+    color: var(--secondary-color); /* Neon pink text */
     padding: 5px 12px;
     border-radius: 8px; /* Rounded corners */
     display: inline-block;
     margin: 10px;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); Subtle shadow for standout effect */
-    /* transition: background-color 0.3s ease, color 0.3s ease; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for standout effect */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 
 .project-card p.desc {
     flex-grow: 1; /* Fills available space, pushes content evenly */
@@ -81,7 +79,6 @@
     margin-bottom: 15px;
 }
 
-
 /* Project Title and Description */
 .project-card h2 {
     font-size: 1.5rem;
@@ -104,7 +101,7 @@
 }
 
 .modal-content {
-    background-color: #2C2C2C;
+    background-color: var(--navbar-bg-color); /* Dark background to match the modal */
     padding: 20px;
     border-radius: 10px;
     width: 80%;
@@ -112,7 +109,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #FFFFFF;
+    color: var(--text-color);
 }
 
 .modal-header {
@@ -123,13 +120,13 @@
 }
 
 .modal-header h2 {
-    color: #FF69B4;
+    color: var(--secondary-color); /* Neon pink */
 }
 
 .modal-header .close {
     font-size: 30px;
     cursor: pointer;
-    color: #FFFFFF;
+    color: var(--text-color);
 }
 
 .modal-body {
@@ -145,19 +142,20 @@
 
 .modal-body .content {
     flex: 1;
-    color: #BBBBBB;
+    color: var(--muted-text-color); /* Suggest: Add variable --muted-text-color for grayish text */
 }
 
+/* Modal Links */
 .modal .links a {
     display: inline-block;
-    background-color: #2C2C2C; /* Dark background to match the modal */
-    color: #FF69B4; /* Neon pink text */
+    background-color: var(--navbar-bg-color); /* Dark background to match the modal */
+    color: var(--secondary-color); /* Neon pink text */
     font-weight: bold;
     padding: 10px 20px;
     margin: 10px 0;
     border-radius: 8px; /* Rounded edges */
     text-decoration: none;
-    border: 2px solid #FF69B4; /* Neon border */
+    border: 2px solid var(--secondary-color); /* Neon border */
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     align-items: center;
@@ -167,18 +165,16 @@
 /* Add a GitHub icon before the text */
 .modal .links a i {
     font-size: 1.2rem;
-    color: #FF69B4; /* Matching icon color */
+    color: var(--secondary-color); /* Matching icon color */
 }
 
 /* Hover Effects */
 .modal .links a:hover {
-    background-color: #FF69B4; /* Neon pink background */
-    color: #FFFFFF; /* White text */
-    box-shadow: 0 0 10px #FF69B4; /* Neon glow effect */
+    background-color: var(--secondary-color); /* Neon pink background */
+    color: var(--text-color); /* White text */
+    box-shadow: 0 0 10px var(--secondary-color); /* Neon glow effect */
     cursor: pointer;
 }
-
-
 
 /* Tag List Styling */
 .tag-list {
@@ -191,7 +187,7 @@
 
 .tag-list li {
     background-color: rgba(255, 105, 180, 0.2); /* Light pink background for tags */
-    color: #FF69B4; /* Neon pink text color */
+    color: var(--secondary-color); /* Neon pink text color */
     border-radius: 12px; /* Rounded, pill-shaped tags */
     padding: 5px 12px; /* Padding inside the tag */
     font-size: 14px;
@@ -201,10 +197,11 @@
 }
 
 .tag-list li:hover {
-    background-color: #FF69B4; /* Neon pink background on hover */
-    color: #FFFFFF; /* White text on hover */
+    background-color: var(--secondary-color); /* Neon pink background on hover */
+    color: var(--text-color); /* White text on hover */
     cursor: pointer;
 }
+
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     /* Adjust project grid on mobile */

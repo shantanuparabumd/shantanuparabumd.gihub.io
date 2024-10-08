@@ -17,7 +17,7 @@
     background-position: center;
     position: relative;
     overflow: hidden;
-    color: #FFFFFF; /* Ensure text is white on image */
+    color: var(--text-color); /* Ensure text is white on image */
     position: relative;
 }
 
@@ -56,22 +56,23 @@
 .work-content-left h3, .work-content-right h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #FF69B4; /* Neon pink */
+    color: var(--secondary-color); /* Neon pink */
 }
 
 .work-content-left .job-title, .work-content-right .job-title {
     font-weight: bold;
     margin-bottom: 10px;
-    color: #00FFFF; /* Neon blue */
+    color: var(--primary-color); /* Neon blue */
 }
 
 .work-content-left .work-description, .work-content-right .work-description {
     margin-bottom: 15px;
 }
 
+/* Work Duration Styling */
 .duration {
     font-style: italic;
-    color: #BBBBBB;
+    color: var(--muted-text-color); /* Light gray */
     margin-top: 10px;
 }
 
@@ -83,8 +84,8 @@
 }
 
 .worktag {
-    background-color: #FF69B4; /* Neon pink */
-    color: white;
+    background-color: var(--secondary-color); /* Neon pink */
+    color: var(--text-color); /* White text */
     padding: 8px 12px;
     border-radius: 8px;
     font-size: 14px;

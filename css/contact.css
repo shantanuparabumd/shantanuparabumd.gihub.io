@@ -2,13 +2,13 @@
 #contact {
     text-align: center;
     padding: 40px 20px;
-    background-color: #1F1F1F; /* Dark background */
-    color: #FFFFFF;
+    background-color: var(--background-color); /* Dark background */
+    color: var(--text-color);
 }
 
 #contact h2 {
     font-size: 2.5rem;
-    color: #FF69B4; /* Neon Pink for Heading */
+    color: var(--secondary-color); /* Neon Pink for Heading */
     margin-bottom: 30px;
 }
 
@@ -22,19 +22,19 @@
 
 /* Individual Contact Item */
 .contact-item {
-    background-color: #2C2C2C;
+    background-color: var(--navbar-bg-color); /* Dark background for contact item */
     padding: 20px;
     border-radius: 10px;
     width: 350px; /* Increased width for longer text */
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    box-shadow: 0 4px 10px var(--shadow-color); /* Subtle shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-item a {
-    color: #FFFFFF;
+    color: var(--text-color); /* White text */
     font-size: 1.1rem;
     text-decoration: none;
     display: flex;
@@ -46,7 +46,7 @@
 
 /* Icons in the Contact Links */
 .contact-item a i {
-    color: #FF69B4; /* Neon Pink for icons */
+    color: var(--secondary-color); /* Neon Pink for icons */
     transition: color 0.3s ease;
 }
 
@@ -57,11 +57,11 @@
 }
 
 .contact-item:hover a {
-    color: #FF69B4; /* Neon Pink text on hover */
+    color: var(--secondary-color); /* Neon Pink text on hover */
 }
 
 .contact-item:hover i {
-    color: #FFFFFF; /* White icon on hover */
+    color: var(--text-color); /* White icon on hover */
 }
 
 /* Responsive Styling */
