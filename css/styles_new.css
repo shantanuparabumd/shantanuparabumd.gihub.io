@@ -1,0 +1,131 @@
+/* Define global variables in :root */
+:root {
+    --primary-color: #00FFFF;   /* Neon Blue */
+    --secondary-color: #FF69B4; /* Neon Pink */
+    --background-color: #1C1C1C; /* Dark Background */
+    --navbar-bg-color: #2C2C2C;  /* Navbar and footer background */
+    --text-color: #FFFFFF;  /* Default text color */
+    --font-family: 'Arial', sans-serif; /* Default font family */
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Include padding and borders in width/height calculations */
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;  /* Prevent horizontal overflow */
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--primary-color);  /* Neon blue */
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-color);  /* Neon pink on hover */
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);  /* Neon blue headers */
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--text-color);  /* White text */
+}
+
+/* Navbar */
+header {
+    background-color: var(--navbar-bg-color);  /* Dark gray background */
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--secondary-color);  /* Neon pink for your name/logo */
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    font-size: 18px;
+    color: var(--primary-color);  /* Neon blue for nav links */
+}
+
+header nav ul li a:hover {
+    color: var(--secondary-color);  /* Neon pink on hover */
+}
+
+/* Main Content */
+main {
+    padding-top: 100px;  /* To offset the fixed navbar */
+    max-width: 100%;  /* Ensure no content overflows horizontally */
+    overflow-x: hidden;  /* Prevent horizontal scrolling in the main content */
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 28px;
+    margin-top: 0;
+    color: var(--secondary-color);  /* Neon pink section titles */
+}
+
+/* Footer */
+footer {
+    background-color: var(--navbar-bg-color);
+    padding: 10px;
+    text-align: center;
+    color: var(--text-color);
+    max-width: 100%;  /* Prevent footer from exceeding screen width */
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* Horizontal Divider and Section Heading */
+hr {
+    border: 0;
+    border-top: 2px solid #FF69B4;
+    margin: 20px 0;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}

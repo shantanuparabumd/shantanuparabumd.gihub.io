@@ -1,80 +1,82 @@
-/* Full Page Background Section */
-#image-banner {
-  width: 100%;
-  height: 100vh;
-  background-image: url('../images/background/back.png'); /* Default image */
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  transition: background-image 1s linear;
-  display: flex;
-  align-items: center;
+/* About Section */
+#about {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-image: url('../images/background/back.png'); /* Replace with your background image path */
+    background-size: cover; /* Make sure the image covers the entire section */
+    background-position: center; /* Center the background image */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 50px; /* Left padding to align text */
+    color: var(--text-color); /* Use your text color variable */
+    overflow: hidden; /* Ensure no content overflows */
 }
 
-/* About Section on top of the banner */
-.about-section {
-  background: linear-gradient(to right, rgba(0, 0, 0, 1.5), rgba(0, 0, 0, 0.1)); /* Dark to transparent gradient */
-  padding: 50px;
-  width: 100%; /* Left half of the page */
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 70%; /* Occupy most of the screen height */
-  border-radius: 15px;
+/* Gradient Overlay */
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ensure the gradient covers the full section */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)); /* Black gradient overlay */
+    z-index: 1; /* Place the overlay behind the content */
 }
 
-/* About Content Inside */
+/* Content in the About Section */
 .about-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Vertical alignment (start at top) */
-  align-items: flex-start; /* Horizontal alignment (aligns to the left) */
-  width: 40%;
+    position: relative;
+    z-index: 2; /* Place content above the gradient */
+    max-width: 600px; /* Limit the width of the text content */
+    color: #FFFFFF; /* Ensure text is white and readable */
 }
 
+/* About Content - Heading */
 .about-content h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
+/* About Content - Paragraph */
 .about-content p {
-  font-size: 24px;
-  line-height: 1.6;
-  color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 /* Download Resume Button */
 .resume-button {
-  align-self: flex-start;
-  background-color: transparent;
-  border: 2px solid #FF69B4; /* Neon Pink Border */
-  color: #FF69B4;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  cursor: pointer;
-  box-shadow: 0 0 10px #FF69B4;
-  transition: all 0.3s ease;
+    background-color: transparent;
+    border: 2px solid var(--primary-color); /* Neon blue border */
+    color: var(--primary-color);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+/* Resume Button - Hover Effect */
 .resume-button:hover {
-  background-color: #FF69B4;
-  color: #000000;
-  box-shadow: 0 0 20px #FF69B4;
+    background-color: var(--primary-color); /* Neon blue background on hover */
+    color: #000000; /* Black text on hover */
+    box-shadow: 0 0 10px var(--primary-color); /* Neon glow effect */
 }
 
-/* Responsiveness */
+/* Responsive Styling for Smaller Screens */
 @media (max-width: 768px) {
-  .about-section {
-      width: 80%;
-      height: auto;
-  }
+    .about-content h1 {
+        font-size: 36px;
+    }
 
-  .about-content h1 {
-      font-size: 36px;
-  }
+    .about-content p {
+        font-size: 16px;
+    }
 
-  .about-content p {
-      font-size: 18px;
-  }
+    .resume-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
 }

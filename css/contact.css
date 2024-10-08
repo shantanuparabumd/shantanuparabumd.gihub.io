@@ -1,60 +1,77 @@
-
+/* Contact Section */
 #contact {
-  background-color: var(--background-color);
-  color: var(--primary-color);
-
-  text-align: center;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1F1F1F; /* Dark background */
+    color: #FFFFFF;
 }
 
 #contact h2 {
-  margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #FF69B4; /* Neon Pink for Heading */
+    margin-bottom: 30px;
 }
 
+/* Contact Container */
 .contact-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
+/* Individual Contact Item */
 .contact-item {
-  width: 25%;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.contact-item i {
-  color:var(--primary-color);
-  margin-bottom: 20px;
+    background-color: #2C2C2C;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px; /* Increased width for longer text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-item a {
-  color: var(--primary-color);
-  font-size: 1.2em;
-  text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+    word-break: break-all; /* Prevent overflow for long text */
 }
 
-.contact-item i:hover {
-  box-shadow: 0px 0px 20px 20px #d8b85980;
-  background-color: #d8b85980;
-
+/* Icons in the Contact Links */
+.contact-item a i {
+    color: #FF69B4; /* Neon Pink for icons */
+    transition: color 0.3s ease;
 }
-    body, main, section {
-        background-color: #1C1C1C !important;
-        color: #FFFFFF !important;
+
+/* Hover Effects */
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Lifted effect */
+}
+
+.contact-item:hover a {
+    color: #FF69B4; /* Neon Pink text on hover */
+}
+
+.contact-item:hover i {
+    color: #FFFFFF; /* White icon on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .contact-item {
+        width: 100%; /* Full width on small screens */
+        max-width: 100%; /* Make items full width on small screens */
     }
 
-    p, a, h1, h2, h3, h4, h5, h6, div, span, li {
-        color: #FFFFFF !important;
+    #contact h2 {
+        font-size: 2rem;
     }
-
-    .intro-section, .about-paragraph, .work-item, .education-card {
-        background-color: #2C2C2C !important;
-        box-shadow: 0 0 15px #00FFFF;
-    }
-
-
-    hr {
-        border-color: #00FFFF !important;
-    }
-    
+}

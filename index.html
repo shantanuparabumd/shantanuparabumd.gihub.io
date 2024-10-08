@@ -3,13 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Portfolio</title>
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles_new.css">
 	<link rel="stylesheet" href="css/about.css">
-	<link rel="stylesheet" href="css/skill.css">
-	<link rel="stylesheet" href="css/project.css">
+	<link rel="stylesheet" href="css/skills.css">
+	<link rel="stylesheet" href="css/projects.css">
 	<link rel="stylesheet" href="css/work.css">
 	<link rel="stylesheet" href="css/contact.css">
-	<link rel="stylesheet" href="css/education.css">
+	<link rel="stylesheet" href="css/education.css"> 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
@@ -37,15 +37,14 @@
 		</nav>
 	</header>
 	<main>
-		<!-- Image Banner Section -->
-		<section id="image-banner">
-			<!-- About Section with gradient background -->
-			<div class="about-section">
-				<div class="about-content">
-					<h1>About Me</h1>
-					<p>Hi! I am a passionate developer with experience in robotics, machine learning, and software development. My projects involve working with state-of-the-art technologies to create innovative solutions.</p>
-					<button class="resume-button">Download Resume</button>
-				</div>
+		<section id="about">
+			<div class="about-content">
+				<h1>About Me</h1>
+				<p>
+					Hi! I am a passionate developer with experience in robotics, machine learning, and software development.
+					My projects involve working with state-of-the-art technologies to create innovative solutions.
+				</p>
+				<button class="resume-button">Download Resume</button>
 			</div>
 		</section>
 		 
@@ -53,74 +52,79 @@
 			<hr>
 			<br>
 			<h2>Work Experience</h2>
-			<div class="about-section">
-				<div class="about-paragraph">
-					<div class="work-item">
-						<h3>Accenture</h3>
-						<p class="job-title">Associate Software Developer</p>
-						<p class="work-description">As an Associate Software Developer at Accenture, I worked with Intel as a client on their CIBR (Central Inventory Business Repository) system.I used PLSQL, scripting, and Python to solve and debug issues, as well as provide software support.During my time there, I utilized various tools such as PLSQL and Abinitio to ensure the efficient functioning of the system.</p>
-						<p class="duration">Jul 2021 - Jul 2022</p>
-					  </div>
-					  <div id="workskill-tags">
+		
+			<!-- First Work Experience Card (Info on Left, Image as Background) -->
+			<div class="work-card" style="background-image: url('../images/background/accenture.png');">
+				<div class="work-content-left">
+					<h3>Accenture</h3>
+					<p class="job-title">Associate Software Developer</p>
+					<p class="work-description">
+						As an Associate Software Developer at Accenture, I worked with Intel as a client on their CIBR 
+						(Central Inventory Business Repository) system. I used PLSQL, scripting, and Python to solve 
+						and debug issues, as well as provide software support. During my time there, I utilized various 
+						tools such as PLSQL and Abinitio to ensure the efficient functioning of the system.
+					</p>
+					<p class="duration">Jul 2021 - Jul 2022</p>
+					<div id="workskill-tags">
 						<div class="worktag">PLSQL</div>
 						<div class="worktag">Python</div>
 						<div class="worktag">LINUX</div>
-						<!-- <div class="worktag">PHP</div>
-						<div class="worktag">MySQL</div> -->
-					  </div>
+					</div>
 				</div>
-			  </div>
-			  <br>
-			  <div class="about-section">
-				<div class="about-paragraph">
-					<div class="work-item">
-						<h3>ROBOCON CRCE</h3>
-						<p class="job-title">Team Captain</p>
-						<p class="work-description">As a Lead of an Undergraduate Robotics team, I led a group of students to build robots from scratch based on different problem statements given by ABU Robocon. I was responsible for overseeing the design and development of the robots, from initial concept to final product. This involved coordinating with team members to assign tasks, setting timelines, and ensuring deadlines were met. I also worked closely with other departments to ensure that the robots were built to specification, and that any technical issues were resolved. Additionally, I helped to train and mentor new team members, and ensured that the team was well-prepared for competitions. Overall, the experience allowed me to develop my leadership, problem-solving, and communication skills while also gaining valuable experience in the field of robotics.</p>
-						<p class="duration"> Jun 2019 - Jul 2021</p>
-					  </div>
-					  <div id="workskill-tags">
+			</div>
+		
+			<!-- Second Work Experience Card (Info on Right, Image as Background) -->
+			<div class="work-card reverse" style="background-image: url('../images/background/robocon.jpeg');">
+				<div class="work-content-right">
+					<h3>ROBOCON CRCE</h3>
+					<p class="job-title">Team Captain</p>
+					<p class="work-description">
+						As a Lead of an Undergraduate Robotics team, I led a group of students to build robots from scratch 
+						based on different problem statements given by ABU Robocon. I was responsible for overseeing the design 
+						and development of the robots, from initial concept to final product.
+					</p>
+					<p class="duration">Jun 2019 - Jul 2021</p>
+					<div id="workskill-tags">
 						<div class="worktag">Python</div>
 						<div class="worktag">Arduino</div>
 						<div class="worktag">RaspberryPi</div>
 						<div class="worktag">Solidworks</div>
-						<!-- <div class="worktag">MySQL</div> -->
-					  </div>				 
-					 </div>
-				<!-- <div class="about-image">
-				  <img src="images/logo/robo.jpg" alt="About image">
-				</div> -->
-				
-			  </div>
-			  
-			 
+					</div>
+				</div>
+			</div>
 		</section>
+
+
 		<section id="education">
 			<hr>
 			<br>
 			<h2>Education</h2>
 			<div class="education-cards">
-			  <div class="education-card">
-				<img src="images/logo/umd.png" alt="University Logo">
-				<div class="education-info">
-				  <h3>Prof. Master's in Robotics</h3>
-				  <p>A James Clark School of Engineering</p>
-				  <p class="gpa"><b>Expected Graduation:</b> May 2024</p>
-				  <p class="gpa"><b>GPA:</b> 4.00</p>
+		
+				<!-- First Education Card (Text on Left, Image in Background) -->
+				<div class="education-card" style="background-image: url('images/logo/umd.png');">
+					<div class="education-info-left">
+						<h3>Prof. Master's in Robotics</h3>
+						<p>A James Clark School of Engineering</p>
+						<p class="gpa"><b>Expected Graduation:</b> May 2024</p>
+						<p class="gpa"><b>GPA:</b> 4.00</p>
+					</div>
 				</div>
-			  </div>
-			  <div class="education-card">
-				<img src="images/logo/mu.png" alt="College Logo">
-				<div class="education-info">
-				  <h3>Bachelor of Electronic Engineering</h3>
-				  <p>Fr. Conceicao Rodrigues college of Engineering</p>
-				  <p class="gpa"><b>Graduated:</b> May 2021</p>
-				  <p class="gpa"><b>GPA:</b> 3.65</p>
+		
+				<!-- Second Education Card (Text on Right, Image in Background) -->
+				<div class="education-card reverse" style="background-image: url('images/logo/mu.png');">
+					<div class="education-info-right">
+						<h3>Bachelor of Electronic Engineering</h3>
+						<p>Fr. Conceicao Rodrigues College of Engineering</p>
+						<p class="gpa"><b>Graduated:</b> May 2021</p>
+						<p class="gpa"><b>GPA:</b> 3.65</p>
+					</div>
 				</div>
-			  </div>
+		
 			</div>
-			
-		  </section>
+		</section>
+
+
 		  <section id="skills">
 			<hr>
 			<br>
@@ -133,18 +137,24 @@
 		  </section>
 		  
 
-		<section id="projects">
-			<hr>
-			<br>
-			<h2>Projects</h2>
-			<div id="project-list">
-				
+		 
+	
+		  <section id="projects">
+			<div class="projects-container">
+				<!-- Section Heading -->
+				<hr>
+				<br>
+				<h2>Projects</h2>
+	
+				<!-- Project Cards List -->
+				<div id="project-list-container">
+					<div id="project-list"></div>
+				</div>
 			</div>
+	
+			<!-- Modal View -->
 			<div id="modal-view"></div>
-			</div>
-			
-			  
-		  </section>
+		</section>
 		  
 		  <section id="contact">
 			<hr>
@@ -171,7 +181,7 @@
 		  
 	</main>
 	<footer>
-		<p>&copy; 2023 Shantanu Parab</p>
+		<p>&copy; 2024 Shantanu Parab</p>
 	</footer>
 </body>
 <script src="app.js"></script>
