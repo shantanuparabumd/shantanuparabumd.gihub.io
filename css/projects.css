@@ -46,7 +46,7 @@
 .project-card .date {
     font-size: 0.9rem;
     font-weight: bold;
-    background-color: rgba(255, 105, 180, 0.2); /* Light pink background */
+    background-color: var(--list-color); /* Light pink background */
     color: var(--secondary-color); /* Neon pink text */
     padding: 5px 12px;
     border-radius: 8px; /* Rounded corners */
@@ -186,13 +186,13 @@
 }
 
 .tag-list li {
-    background-color: rgba(255, 105, 180, 0.2); /* Light pink background for tags */
+    background-color: var(--list-color); /* Light pink background for tags */
     color: var(--secondary-color); /* Neon pink text color */
     border-radius: 12px; /* Rounded, pill-shaped tags */
     padding: 5px 12px; /* Padding inside the tag */
     font-size: 14px;
     font-weight: 500;
-    border: 1px solid rgba(255, 105, 180, 0.3); /* Subtle border */
+    border: 1px solid var(--list-color-dark); /* Subtle border */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 

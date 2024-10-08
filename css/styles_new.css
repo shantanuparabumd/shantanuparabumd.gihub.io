@@ -3,10 +3,13 @@
     --secondary-color: #FF69B4; /* Neon Pink */
     --background-color: #1C1C1C; /* Dark Background */
     --navbar-bg-color: #2C2C2C;  /* Navbar and footer background */
-    --text-color: #FFFFFF;  /* Default text color */
-    --muted-text-color: #BBBBBB; /* Light gray for muted text */
-    --meter-bg-color: #444; /* Meter track background */
+    --text-color: #FFFFFF;  /* Default text color (White) */
+    --hover-text-color: #000000; /* Hover text color (Black) */
+    --muted-text-color: #BBBBBB; /* Light gray for less important text */
     --shadow-color: rgba(0, 0, 0, 0.3); /* Subtle shadow for elements */
+    --meter-bg-color: #444; /* Meter track background */
+    --list-color: rgba(255, 105, 180, 0.2);
+    --list-color-dark: rgba(255, 105, 180, 0.3);
 }
 
 
@@ -115,7 +118,7 @@ footer p {
 /* Horizontal Divider and Section Heading */
 hr {
     border: 0;
-    border-top: 2px solid #FF69B4;
+    border-top: 2px solid var(--secondary-color);
     margin: 20px 0;
 }
 
