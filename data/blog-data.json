@@ -1,0 +1,177 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Fireside Chat: Remi Cadene Hugging Face",
+      "image": "images/blogs/fireside_remi.jpg",
+      "description": "Remi Cadene, Principal Research Scientist at Hugging Face, and Shantanu Parab, Robotic Machine Learning Specialist at Trossen Robotics, discuss the current state of robotic machine learning, Hugging Face LeRobot, the Trossen Robotics Aloha kits, low-cost robotic hardware for research, and more.",
+      "url": "https://youtu.be/-I0ePAf5UJg",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 2,
+      "title": "Octo Paper Review",
+      "image": "images/blogs/octo.jpg",
+      "description": "We explore the paper 'Octo: An Open-Source Generalist Robot Policy,' authored by researchers from UC Berkeley, Stanford, Carnegie Mellon, and Google DeepMind. Octo offers a new way to train robots by shifting the focus from individual task-specific learning to a more flexible, generalist approach. ",
+      "url": "https://youtu.be/ZU0iw0bNV2w",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 3,
+      "title": "Bi-ACT Paper Review",
+      "image": "images/blogs/biact.jpg",
+      "description": "We dive into the innovative paper \"Bi-ACT: Bilateral Control-Based Imitation Learning\" by Masato Kobayashi and his team at Osaka University in Japan. Building on the concept of Action Chunking Transformers (ACT), this paper introduces a new approach that incorporates both position and force information, enabling robots to adapt to various object properties like hardness and weight.",
+      "url": "https://youtu.be/29cQm-AwN_s",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 4,
+      "title": "Importance of Data Quality in Imitation Learning",
+      "image": "images/blogs/data_quality.jpg",
+      "description": "In the realm of imitation learning, the quality of the data used for training can be as crucial as the model architecture itself. Through a series of experiments using the Aloha Stationary Bimanual Operation robotics kit, I explored how variations in data collection affect the performance of an imitation learning model. Here's what I discovered.",
+      "url": "https://www.trossenrobotics.com/post/the-impact-of-data-quality-on-training-imitation-learning-models-experiments-with-the-aloha-kit",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 5,
+      "title": "Hugging Face Tutorial",
+      "image": "images/blogs/hugingface.jpg",
+      "description": "Welcome to our in-depth video tutorial on integrating your Aloha Kit with Hugging Face’s LeRobot platform! In this video, we’ll guide you step-by-step through the setup and operation of Aloha using LeRobot, covering everything you need to start leveraging this powerful combination for your machine learning research and development projects.",
+      "url": "https://youtu.be/kyvwxYqBCBE",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 6,
+      "title": "Action Chunking Transformers",
+      "image": "images/blogs/act.jpg",
+      "description": "Imitation learning helps robots master complex tasks by mimicking expert demonstrations, with Action Chunking Transformers (ACT) enhancing performance and reliability, making advanced robotics accessible and practical for low-cost robots.",
+      "url": "https://youtu.be/ppLDLqA0r2c",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 7,
+      "title": "Encoders| Auto, Variational, Conditional",
+      "image": "images/blogs/encoders.jpg",
+      "description": "Explore Auto Encoders, VAEs, and CVAEs in robotic machine learning. Learn how these models reduce data complexity, generate new data, and improve precision. Topics: Auto Encoders for simplification, VAEs for data generation, and CVAEs for conditioning data for accurate trajectories.",
+      "url": "https://youtu.be/LK8eoYG9Rbc",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 8,
+      "title": "Peg Insertion Experiment Using Aloha",
+      "image": "images/blogs/peg.jpg",
+      "description": "Precision tasks like peg-insertion are essential for testing robotic fine motor skills. This experiment used a bimanual robotic arm setup to insert a peg into a fixed-position hole of the same size, enabling us to evaluate performance metrics and control accuracy under consistent conditions.",
+      "url": "https://www.trossenrobotics.com/post/exploring-precision-with-peg-insertion-using-bimanual-robots-an-experiment-with-the-act-model",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 9,
+      "title": "Rise of Diffusion Models in Imitation Learning",
+      "image": "images/blogs/diffusion.jpg",
+      "description": "Diffusion models have transformed imitation learning, enabling robots to mimic human actions with precision. Originally for image generation, these models now help robots learn from demonstrations, manage uncertainty, and perform complex tasks. This article explores their evolution, strengths, and advancements.",
+      "url": "https://www.trossenrobotics.com/post/the-rise-of-diffusion-models-in-imitation-learning",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 10,
+      "title": "Cloud Computing using Google Colab",
+      "image": "images/blogs/cloud.jpg",
+      "description": "With ML expanding in robotics, efficient tools are crucial. Our Google Colab Notebook simplifies training robotic models using cloud GPUs, allowing access to top-tier hardware without costly maintenance. Ideal for Aloha Kits or other datasets, it enables easy cloud-based model training, bypassing local resources.",
+      "url": "https://youtu.be/KAdVobQZSBg",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 11,
+      "title": "Unleashing the Power of Simulation Engines: Writing Plugins for Enhanced Drone Simulations",
+      "image": "images/blogs/drone.webp",
+      "description": "Learn to create a drone delivery system using simulation plugins with Blender, Solidworks, and Aruco IDs.",
+      "url": "https://medium.com/@shantanuparab99/unleashing-the-power-of-simulation-engines-writing-plugins-for-enhanced-drone-simulations-ab7c847ca432",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 12,
+      "title": "Setup CI/CD for a ROS2 project using Github",
+      "image": "images/blogs/git.webp",
+      "description": "CI/CD enhances software development by integrating frequent code changes for faster feedback, reducing bugs, and streamlining deployment. Automated testing ensures quality, fosters collaboration, and accelerates feature delivery, enabling rapid response to market demands.",
+      "url": "https://medium.com/@shantanuparab99/setup-ci-cd-for-a-ros2-project-using-github-121d62bae348",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 13,
+      "title": "Firefly Algorithm: Bio-Inspired Decision Making Algorithm",
+      "image": "images/blogs/firefly.jpg",
+      "description": "The Firefly Algorithm (FA) is an optimization method inspired by fireflies' bioluminescent behavior, used for communication and attraction. FA simulates this behavior to find solutions for various optimization problems.",
+      "url": "https://medium.com/@shantanuparab99/firefly-algorithm-bio-inspired-decision-making-algorithm-d25941725d14",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 14,
+      "title": "Breadth First Search",
+      "image": "images/blogs/bfs.gif",
+      "description": "The BFS search algorithm is a fundamental search algorithm and is used to develop more advanced algorithms. It has a time complexity of O(V+E) where V is the vertices and E is the edges. It is very useful in finding the shortest path in an unweighted graph. In this article, we are going to explore how BFS works and use it to solve an 8 Puzzle Game.",
+      "url": "https://medium.com/@shantanuparab99/breadth-first-search-785dce0ad0a9",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 15,
+      "title": "Hough Transforms",
+      "image": "images/blogs/hough.webp",
+      "description": "Detecting features like corners and lines in images is key for matching and object detection. Various algorithms, such as Hough Transform, Harris Corner, and FAST, are available in OpenCV for direct use. This article focuses on how Hough Transform detects lines and corners, providing insight into image processing.",
+      "url": "https://medium.com/@shantanuparab99/hough-transform-3e5f6875b9b8",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 16,
+      "title": "Homography",
+      "image": "images/blogs/homography.webp",
+      "description": "Homography is an essential concept in image processing and finds its use in many other fields. Homography is a transformation matrix that takes you from one plane to another plane. In this project, we will learn about homography and explore one of its applications. We will place a logo of our choice on a field goal post using Homography.",
+      "url": "https://medium.com/@shantanuparab99/homography-a690527f2e1b",
+      "video": "",
+      "date": "October 2024"
+    },
+    {
+      "id": 17,
+      "title": "Gazebo Custom Plugin ROS2: A Step-by-Step Guide",
+      "image": "images/blogs/conveyor.png",
+      "description": "Simulating real-world dynamics is crucial, and conveyor belt simulation is a prime example used across industries. This article explores a project that animates conveyor belts in a simulation environment, delving into core components, rationale, technical details, and the workings of a custom Conveyor Belt Plugin.",
+      "url": "https://www.linkedin.com/pulse/gazebo-custom-plugin-ros2-step-by-step-guide-shantanu-parab/",
+      "video": "",
+      "date": "October 2024"
+    },
+
+    {
+      "id": 18,
+      "title": "The Construct: Robotics Developer Day",
+      "image": "images/blogs/contruct.jpeg",
+      "description": "I was invited as a speaker at The Construct Robotics Developer Day to present on creating custom ROS plugins. The talk focused on developing plugins to expand simulation capabilities, using a conveyor belt simulation as an example, and covered essential components and best practices to help developers enhance their ROS projects.",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7210220325630877696/",
+      "video": "",
+      "date": "October 2024"
+    },
+
+    {
+      "id": 19,
+      "title": "Autonomous Vehicle",
+      "image": "images/blogs/autocar.png",
+      "description": "In my pursuit of understanding the complexities of autonomous vehicles, I've made significant strides leveraging simulation tools like Gazebo. By integrating a Toyota Prius model into ROS 2 and Gazebo, and customizing the CitySim package, I've created a dynamic urban environment conducive to rigorous testing and experimentation.",
+      "url": "https://www.linkedin.com/posts/shantanu-parab_osrf-autonomousvehicles-ros2-activity-7183615111591325696-FY1u?utm_source=share&utm_medium=member_desktop",
+      "video": "",
+      "date": "October 2024"
+    }
+    ]
+  }

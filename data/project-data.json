@@ -1,103 +1,212 @@
 {
   "projects": [
     {
-      "id":1,
-      "title":"Rescue Robots",
-      "image":"images/project/rescue.jpg",
-      "description":"Swarm of robots that map a unknown area and locate humans in it and plan a path towards the human.",
-      "tags":["ROS","MATLAB","COMPUTER VISON","PATH PLANNING","SLAM"],
-      "github":"https://github.com/shantanuparabumd/Rescue-Robots.git",
-      "video":"",
-      "date":"December 2022",
-      "longDescription":"The system described is a swarm of robots designed to map an unknown area and locate humans within it, using MATLAB, ROS, and Navigation toolboxes to connect with a TurtleBot3 simulation on a remote machine. The main robot is equipped with a lidar scanner and is sent to scan the unknown region, generating an occupancy map using simultaneous localization and mapping (SLAM) techniques. The robot is also equipped with a Computer Vision toolbox in Matlab, allowing it to detect humans within the mapped area. The location of the human is computed from the corresponding depth information of the center of the frame of the detected human. Using frame transformation, the human's location is localized in the map frame, becoming the goal location for other robots in the swarm. The RRT path planner is then used to plan a path between the goal and the robot's current location. Finally, the swarm of robots moves to the goal location using a simple path following algorithm. This system allows for efficient and safe navigation in unknown areas, as well as the location of humans, making it useful in search and rescue operations or other scenarios where humans need to be located and assisted."
-      },
-      {
-      "id":2,
-      "title":"Autonomous Robot",
-      "image":"images/project/prirate.jpg",
-      "description":"Building a Autonomous robot (Pirate 4W) using Raspberry Pi with perception capablities.",
-      "tags":["RASPBERRY PI","OPEN CV","AUTONOMOUS ROBOTICS","PYTHON"],
-      "github":"https://github.com/shantanuparabumd/Autonomous-Robot-809T.git",
-      "video":"",
-      "date":"December 2022",
-      "longDescription":"The Autonomous Robot is built on the Pirate 4WD mobile chassis and controlled using a Raspberry Pi. The robot is propelled by four geared motors, which are operated through an L298N motor driver. The robot's Raspberry Pi camera is mounted on the robot for perception. The robot is also fitted with optical encoders on its motors and uses a BN005 IMU for localization. Additionally, the robot features a gripper, which can pick up objects, and the gripper is actuated using a servo.This robot is designed to detect obstacles in unknown regions and classify them based on their colors. The robot is programmed to pick up only objects of a specific color and transport them to a goal location. The robot has been optimized to pick up the maximum number of target objects while avoiding collisions with obstacles.      Overall, this autonomous robot is a versatile tool that can be used in a variety of applications. Its ability to perceive its environment through its camera and accurately localize itself using its sensors allows it to navigate complex environments with ease. Its gripper and servo allow it to manipulate objects, making it a useful tool for picking up and transporting objects. The robot's ability to classify objects by color allows for efficient sorting and transportation of objects, making it a valuable tool in applications such as warehouse automation and logistics."
-      },
-      {
-      "id":3,
-      "title":"Swarm Robots",
-      "image":"images/project/swarm.jfif",
-      "description":"Swarm of robots that arage themseleves into geometric patterns",
-      "tags":["ROS2","SWARM ALGORITHMS","GAZEBO","C++"],
-      "github":"https://github.com/jayprajapati009/project_chakravyu.git",
-      "video":"",
-      "date":"December 2022",
-      "longDescription":"In this project, a swarm of TurtleBots is used to demonstrate the use of ROS2 in swarm robotics. The robots start from an initial position and move into a geometric pattern when given a command. The master node generates a goal location for the robots in the network, allowing the system to form patterns of given dimensions for any number of robots without shutting down the system. One of the main challenges of this project was working with ROS2, which is a fairly new technology and lacks documentation. To overcome this challenge, the project was developed using industry-approved software development practices as part of a graduate course. Git was used for code collaboration, and Git CI was used for continuous integration. The Agile iterative process was followed for development, with weekly sprints. Additionally, unit tests were developed using Google Test to ensure the system was functioning properly.  Overall, this project is a testament to the versatility of ROS2 in swarm robotics. By using the TurtleBots, the system was able to demonstrate how multiple robots can work together to accomplish complex tasks. The use of industry-approved software development practices and the Agile iterative process ensures that the system is developed efficiently and effectively. The use of Git and Git CI also allows for collaborative development, making it easier for multiple developers to work on the same codebase. Finally, the use of unit tests ensures that the system is functioning properly, making it more reliable and robust."
-      },
-      {
-      "id":4,
-      "title":"Kuka Manipulator",
-      "image":"images/project/kuka.png",
-      "description":"Simulation of a Kuka manipulator  using  Gazebo and ROS",
-      "tags":["ROS","SOLIDWORKS","GAZEBO","PYTHON"],
-      "github":"https://github.com/shantanuparabumd/kuka_robot.git",
-      "video":"",
-      "date":"December 2022",
-      "longDescription":"In this project, a Kuka manipulator was designed from scratch using Solidworks as a reference for a Kuka robot. The design was then exported into URDF format, allowing it to be integrated with ROS and simulated in Gazebo. The robot was equipped with joints and motors, allowing it to be controlled using a Python program developed in ROS. The inverse and forward kinematics methods were used to make the robot move in a specific trajectory. However, the team faced challenges with singularities while taking the inverse of the Jacobian. To overcome this issue, the Pseudo Inverse method was used to get the inverse of the Jacobian matrix as a solution. To avoid division by zero errors, the transformation matrix elements were populated with infinitesimally small values rather than zero. Despite these challenges, the robot was able to move in a specified trajectory. One limitation of the project was that it did not account for collisions between the robot's links. This could be solved by using an inverse kinematics solver with a collision matrix. Despite this limitation, the project demonstrates the versatility of ROS and its ability to integrate with other tools such as Solidworks and Gazebo. It also highlights the importance of problem-solving and using alternative solutions to overcome challenges. Overall, this project provides a solid foundation for future projects involving robotic manipulators and ROS."
-      },
-      {
-      "id":5,
-      "title":"Trajectory of Panda",
-      "image":"images/project/pada.jpg",
-      "description":"Visualization of trajectory of Panda manipulator using Inverse and Forward Kinematics",
-      "tags":["PYTHON","MATPLOTLIB","MODELLING"],
-      "github":"https://github.com/shantanuparabumd/Panda-Robot.git",
-      "video":"",
-      "date":"December 2022",
-      "longDescription":"During our project, we aimed to gain a thorough understanding of the principles behind modelling a robotics manipulator. To achieve this, we decided to create a simple visualization using Python and the Matplotlib library. Our main goal was to track the trajectory of the end effector of a Panda Emica robotic manipulator. To start, we formulated the DH parameter table for the robot and then moved onto the forward and inverse kinematics. As part of the project, we imagined that the robot's end effector had a pen attached to it and our task was to draw a circle on a wall at a specific distance with a designated force, diameter, and center location. To complete this task, we used the Euler-Lagrange dynamics to calculate the torque on each joint. Once we had completed the calculations, we made a 3D plot of the trajectory of the pen to check if it accurately followed a circular path. Next, we plotted all of the vital information as graphs in Matplotlib. By examining the graphs, we were able to make inferences about the behavior of the robot. We used the information we gathered to improve our understanding of robotics manipulators and gained insight into how to model their movements accurately."
-      },
-      {
-      "id":6,
-      "title":"Roomba",
-      "image":"images/project/turtle.png",
-      "description":"Simulation of a cleaner robot in Gazebo using ROS2",
-      "tags":["ROS2","GAZEBO"],
-      "github":"https://github.com/shantanuparabumd/roomba.git",
-      "video":"",
-      "date":"December 2022",
-      "longDescription":"For my project, I repurposed a basic Turtlebot3 robot to function as a Roomba cleaner. To achieve this, I added a depth camera plugin to the robot, which allowed it to detect objects in its environment. The simulation was carried out in Gazebo, while the robot was controlled using ROS2. The robot was designed to use its Lidar and depth sensor to identify and avoid obstacles while cleaning the room. The Lidar was used to detect obstacles on the ground level, while the depth sensor helped the robot navigate its way around furniture and other objects in the room. By simulating the robot in Gazebo, I was able to test and refine its movements in a controlled environment before deploying it to the real world. Additionally, by using ROS2 to control the robot, I was able to easily modify its behavior and incorporate more advanced functionality if required. Overall, this project demonstrated the potential of using robotics to perform everyday tasks such as cleaning, and highlighted the usefulness of simulation and ROS2 in developing and testing these types of systems."
-      },
-      {
-      "id":7,
-      "title":"Valgrind",
-      "image":"images/project/valgrind.png",
-      "description":"Code optimization and debugging using Valgrind",
-      "tags":["C++","VALGRIND"],
-      "github":"https://github.com/shantanuparabumd/Valgrind.git",
-      "video":"",
-      "date":"December 2022",
-      "longDescription":"The project was undertaken with the aim of improving the understanding of Valgrind and its effectiveness in software development. Valgrind is an open-source tool designed to identify memory leaks, buffer overflows, and other programming errors that could lead to system crashes. The project involved exploring the various features of Valgrind and analyzing its usefulness in ensuring robust and fail-proof software systems. The project highlighted the importance of effective debugging to identify and rectify coding errors. The team found that Valgrind was an effective tool for debugging C and C++ programs as it provided detailed information about memory errors and other issues, including uninitialized variables, incorrect pointer use, and memory leaks. The team also found that Valgrind could identify performance issues such as cache usage, thread synchronization errors, and resource utilization. These features enabled the team to optimize their code and make it more efficient. One of the key advantages of Valgrind is its versatility. It can be used with a wide range of programming languages and platforms, including Linux and macOS. Additionally, Valgrind can be integrated with other debugging tools, such as GDB, to further enhance its capabilities. Overall, the project demonstrated the usefulness of Valgrind as a debugging tool and emphasized the importance of effective debugging in ensuring the robustness and reliability of software systems."
-      },
-      {
-      "id":8,
-      "title":"ROS2 Tutorials",
-      "image":"images/project/ros2.png",
-      "description":"Implementation of ROS2 concepts.",
-      "tags":["C++","ROS2"],
-      "github":"https://github.com/shantanuparabumd/beginner_tutorials.git",
-      "video":"",
-      "date":"December 2022",
-      "longDescription":"For my coursework project, I decided to focus on implementing different ROS2 features, such as publishers, subscribers, services, actions, etc. I aimed to increase my understanding of ROS2 by creating simple projects that allowed me to work with these features and improve my skills. Additionally, I wrote unit tests for my projects using gtest in C++ to ensure that my code was of high quality. Throughout the project, I learned a great deal about the various components of ROS2 and how they interact with each other. I found that implementing different features helped me understand how they could be used in practical applications, such as creating a simple navigation system for a robot. By writing unit tests using gtest, I was able to ensure that my code was of high quality and robust. This process allowed me to catch errors and bugs early in the development process, which saved me time and effort in the long run. Overall, this project was a great way for me to improve my understanding of ROS2 and gain hands-on experience with its features. I feel that the skills I gained through this project will be useful in my future coursework and career in robotics."
-      },
-      {
-      "id":9,
-      "title":"ROS Toy Car",
-      "image":"images/project/gazebo.jfif",
-      "description":"Design and simulation of toy car in Gazebo using ROS",
-      "tags":["PYTHON","ROS2","GAZEBO"],
-      "github":"https://github.com/shantanuparabumd/toy_car.git",
-      "video":"",
-      "date":"December 2022",
-      "longDescription":"As part of a modeling project, I designed a toy car using SolidWorks and then exported it into URDF for simulation in Gazebo. To integrate motors and joints on the car, I used ROS and then controlled it using a Python code to steer the robot using the keyboard. This project allowed me to apply my SolidWorks skills in a practical way and get hands-on experience with designing and simulating robotic systems. I found that the integration of ROS into the project made it much easier to control the car's movements and provided more flexibility in terms of programming. One of the key challenges I faced during the project was ensuring that the robot's movements were smooth and realistic. To overcome this challenge, I experimented with different control algorithms and tuning parameters until I achieved the desired result. The Python code used to steer the robot using the keyboard was straightforward and easy to implement. This allowed me to quickly test and iterate on my designs, making the development process much more efficient. Overall, this project was a great way for me to gain practical experience with designing and simulating robotic systems. The combination of SolidWorks, URDF, Gazebo, and ROS provided a comprehensive set of tools that allowed me to create a functional and realistic toy car."
-      }
+      "id": 1,
+      "title": "Drone Delivery Simulation",
+      "image": "images/project/drone.webp",
+      "description": "A drone simulation system for automated parcel delivery with Gazebo and ROS plugins.",
+      "tags": ["Gazebo", "ROS", "Blender", "SolidWorks", "Drone Simulation"],
+      "github": "https://github.com/shantanuparabumd/drone_delivery",
+      "video": "images/videos/drone.mp4",
+      "date": "May 2024",
+      "longDescription": "This project involves developing a simulated drone delivery system using Gazebo, ROS, SolidWorks, and Blender. The drone, modeled in SolidWorks, is equipped with custom plugins for flight control, odometry publishing, and vacuum gripper functionality for picking up and placing parcels based on detected Aruco markers. The drone's flight is stabilized through a PID controller, while odometry data serves as feedback. The environment and parcels are modeled in Blender, with necessary physics adjustments for realistic simulation. The article provides a step-by-step guide on developing plugins for drone flight, grasping, and controlled delivery of parcels in specified locations.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/project/drone.webp"
+        },
+        {
+          "type": "video",
+          "url": "images/videos/drne.mp4"
+        },
+        {
+          "type": "article",
+          "image": "images/project/drone.webp",
+          "url": "https://medium.com/@shantanuparab99/unleashing-the-power-of-simulation-engines-writing-plugins-for-enhanced-drone-simulations-ab7c847ca432"
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "title": "Quadruped Robot Simulation",
+      "image": "images/project/quadruped.png",
+      "description": "A Quadruped Robot designed from scratch in SolidWorks and simulated in Gazebo with ROS communication and Python control.",
+      "tags": ["ROS", "Gazebo", "SolidWorks", "Inverse Kinematics", "URDF", "Python"],
+      "github": "https://github.com/shantanuparabumd/quad_robo",
+      "video": "",
+      "date": "October 2024",
+      "longDescription": "In this project, I designed a Quadruped Robot from the ground up using SolidWorks, converted it to URDF for ROS integration, and simulated it in Gazebo. Key highlights include the detailed design in SolidWorks, URDF conversion for seamless ROS integration, implementation of inverse kinematics using DH parameters and Jacobian methods, and robust ROS communication for controlling the robot’s movements. Additionally, I developed a Python script for interactive control of the robot, making it versatile and user-friendly in the simulation environment. This project showcases my skills in Robot Modelling, Simulation, and ROS, providing valuable experience with Gazebo and Python control systems.",
+      "media": [
+        {
+          "type": "video",
+          "url": "images/videos/quadruped.mp4"
+        },
+        {
+          "type": "article",
+          "image": "images/project/quadruped.png",
+          "url": "https://www.linkedin.com/posts/shantanu-parab_robotics-simulation-rosnoetic-activity-7093805585623572481-FQK-?utm_source=share&utm_medium=member_desktop"
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "title": "Autonomous Robot",
+      "image": "images/project/autobot.png",
+      "description": "Developed an autonomous vehicle capable of navigating complex obstacle courses and performing object manipulation tasks.",
+      "tags": ["ROS2", "C++", "Python", "Perception", "Path Planning", "Raspberry Pi", "YOLO", "MiDAS"],
+      "github": "https://github.com/shantanuparabumd/Autonomous-Robot-809T",
+      "video": "",
+      "date": "May 2023",
+      "longDescription": "This project involved designing and constructing an autonomous vehicle that navigates complex environments and performs object manipulation. Using a Raspberry Pi with Ubuntu 20.04 and ROS2 Galactic, the vehicle integrates various sensors and advanced algorithms. Object detection is handled by YOLO, allowing efficient identification of colored objects, while MiDAS provides depth estimation for accurate perception. Localization is achieved through encoders and IMU sensors, with the RRT* algorithm for global path planning and a potential field algorithm for dynamic path planning, ensuring real-time adaptation to moving obstacles. Custom libraries were developed to enable seamless communication between hardware components via UART, SPI, and I2C protocols, resulting in a robust system capable of autonomous navigation and manipulation in dynamic settings.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/project/autobot.png"
+        },
+        {
+          "type": "video",
+          "url": "images/videos/autorobot.mp4"
+        },
+        {
+          "type": "video",
+          "url": "images/videos/grandchallenge.mp4"
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "title": "ARIAC Project",
+      "image": "images/project/ariac.png",
+      "description": "Implemented robotics solutions for industrial automation tasks as part of the ARIAC competition.",
+      "tags": ["ROS", "Industrial Automation", "Robotics", "Automation"],
+      "github": "https://github.com/shantanuparabumd/ariac_2024",
+      "video": "",
+      "date": "May 2024",
+      "longDescription": "As part of the Agile Robotics for Industrial Automation Competition (ARIAC), I developed robotics solutions focused on enhancing industrial automation processes. My work involved creating automated systems to manage complex tasks efficiently, using ROS for modular and scalable development. This project emphasized real-world applications in industrial environments, challenging me to optimize robotic actions for high precision and reliability, which are critical in automation workflows.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/project/ariac.png"
+        },
+        {
+          "type": "video",
+          "url": "images/videos/ARIAC.mp4"
+        },
+        {
+          "type": "video",
+          "url": "images/videos/ariac.mp4"
+        }
+      ]
+    },
+
+    {
+      "id": 5,
+      "title": "Autonomous Vehicle Simulation",
+      "image": "images/project/autovehicle.png",
+      "description": "Developed a ROS2-based autonomous vehicle simulation using Gazebo, equipped with advanced path planning and obstacle avoidance capabilities.",
+      "tags": ["ROS2", "Gazebo", "Path Planning", "C++", "Python", "LiDAR", "Computer Vision"],
+      "github": "https://github.com/shantanuparabumd/autonomous_vehicle",
+      "video": "",
+      "date": "March 2024",
+      "longDescription": "This project involved developing an autonomous vehicle simulation using a Toyota Prius model in the Gazebo environment, with ROS2 integration for sensor and actuator control. Using sensor fusion from LiDAR and camera data, the simulation enabled accurate obstacle detection and lane recognition. I implemented the RRT* algorithm for efficient global path planning, allowing the vehicle to navigate through static obstacles. For dynamic obstacles, I utilized potential field algorithms to facilitate real-time path adjustments. OpenCV was employed for lane and obstacle identification, enhancing the vehicle's navigation capabilities. In line with Agile practices, this project involved rigorous testing with the Google Test Suite and continuous integration to ensure code robustness.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/project/autovehicle.png"
+        },
+        {
+          "type": "video",
+          "url": "images/videos/auto_vehicle.mp4"
+        },
+        {
+          "type": "article",
+          "image": "images/project/autovehicle.png",
+          "url": "https://www.linkedin.com/posts/shantanu-parab_osrf-autonomousvehicles-ros2-activity-7183615111591325696-FY1u?utm_source=share&utm_medium=member_desktop"
+        }
+      ]
+    },
+
+    {
+      "id": 6,
+      "title": "3D Vision - Point Cloud Classification and NeRF Modeling",
+      "image": "images/project/lego.gif",
+      "description": "Explored advanced 3D vision techniques for point cloud classification using PointNet and 3D model generation using NeRF.",
+      "tags": ["Python", "PointNet", "NeRF", "3D Vision", "Computer Vision", "Machine Learning"],
+      "github": "https://github.com/shantanuparabumd/assignment3_sparab",
+      "video": "",
+      "date": "December 2023",
+      "longDescription": "This project combined two advanced techniques in 3D vision: Point Cloud Classification using PointNet and 3D Model Generation with Neural Radiance Fields (NeRF). PointNet was employed to classify point clouds into categories like chairs, vases, and lamps, while also segmenting chairs into specific sections. The project analyzed the effects of point cloud density and object rotation on classification accuracy, highlighting significant drops in accuracy with reduced density and extreme rotations. Additionally, the NeRF model was implemented to reconstruct a 3D model of a Lego bulldozer with high detail. By leveraging neural networks to predict radiance and capture intricate geometry, the project demonstrated practical applications of NeRF in generating realistic 3D models. Experiments with different training epochs underscored the impact of model optimization for realistic renderings. This project emphasizes expertise in 3D vision, point cloud analysis, and neural network-based 3D modeling, showcasing proficiency in translating complex theories into effective applications.",
+      "media": [
+        {
+          "type": "article",
+          "image": "images/project/pointnet.gif",
+          "url": "https://github.com/shantanuparabumd/assignment4_sparab"
+        },
+        {
+          "type": "article",
+          "image": "images/project/lego.gif",
+          "url": "https://github.com/shantanuparabumd/assignment3_sparab"
+        }
+      ]
+    },    
+
+    {
+      "id": 7,
+      "title": "Swarm Robotics: Firefly Algorithm",
+      "image": "images/project/firefly.png",
+      "description": "Implemented a bio-inspired Firefly algorithm for swarm robotics in a Gazebo simulation using ROS2, enabling object identification and collaborative decision-making.",
+      "tags": ["ROS2", "C++", "OpenCV", "Firefly Algorithm", "Swarm Intelligence"],
+      "github": "https://github.com/shantanuparabumd/firefly_swarm",
+      "video": "",
+      "date": "December 2022",
+      "longDescription": "This project explores swarm robotics through a bio-inspired decision-making algorithm based on the Firefly Algorithm, implemented within the Gazebo simulation environment using ROS2. Using Turtle robots with camera sensors and IMUs, the system identifies colored objects and builds a global map, demonstrating intelligent collective behavior. Each robot locates objects with OpenCV and uses the Firefly algorithm to simulate attraction based on intensity and distance, causing robots to cluster near objects of interest. This approach illustrates the application of swarm intelligence in tasks such as search and rescue, where robots gather and navigate collaboratively. The project successfully showcases the Firefly algorithm's potential for swarm-based decision-making and object localization in simulated environments, expanding its use beyond traditional optimization problems.",
+      "media": [
+        {
+          "type": "video",
+          "url": "images/videos/firefly.mp4"
+        },
+        {
+          "type": "article",
+          "image": "images/project/firefly.png",
+          "url": "https://medium.com/@shantanuparab99/firefly-algorithm-bio-inspired-decision-making-algorithm-d25941725d14"
+        }
+      ]
+    },
+
+    {
+      "id": 8,
+      "title": "Conveyor Belt Plugin for Gazebo",
+      "image": "images/project/conveyor.png",
+      "description": "Developed a custom Gazebo plugin to simulate a conveyor belt, complete with object motion control using ROS2.",
+      "tags": ["ROS2", "Gazebo", "C++", "Simulation", "Custom Plugin"],
+      "github": "https://github.com/shantanuparabumd/conveyor_belt",
+      "video": "",
+      "date": "September 2023",
+      "longDescription": "In this project, I created a conveyor belt simulation within the Gazebo environment, utilizing a custom ROS2 plugin for precise object movement. Inspired by the ARIAC competition, this setup features a URDF model of a conveyor belt controlled via a prismatic joint, enabling continuous forward motion. To ensure objects move forward without returning with the belt, the plugin resets the belt's position at each cycle, allowing objects to progress independently along the belt. The project includes launch scripts and a 'spawn_object' script, making the conveyor belt easily deployable in diverse simulation scenarios. This project illustrates how to create custom Gazebo plugins, enhancing simulation capabilities and providing insights into real-world industrial scenarios.",
+      "media": [
+        {
+          "type": "video",
+          "url": "images/videos/conveyor.mp4"
+        },
+        {
+          "type": "article",
+          "image": "images/blogs/conveyor.png",
+          "url": "https://www.linkedin.com/pulse/gazebo-custom-plugin-ros2-step-by-step-guide-shantanu-parab/"
+        },
+        {
+          "type": "article",
+          "image": "images/blogs/contruct.jpeg",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7210220325630877696/"
+        }
+      ]
+    }
+    
+
+      
+
+      
   ]
 }

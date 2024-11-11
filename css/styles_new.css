@@ -2,7 +2,7 @@
     --primary-color: #00FFFF;   /* Neon Blue */
     --secondary-color: #FF69B4; /* Neon Pink */
     --background-color: #1C1C1C; /* Dark Background */
-    --navbar-bg-color: #2C2C2C;  /* Navbar and footer background */
+    --navbar-bg-color: #000000;  /* Navbar and footer background */
     --text-color: #FFFFFF;  /* Default text color (White) */
     --hover-text-color: #000000; /* Hover text color (Black) */
     --muted-text-color: #BBBBBB; /* Light gray for less important text */
@@ -64,7 +64,7 @@ header {
 
 header h1 {
     color: var(--secondary-color);  /* Neon pink for your name/logo */
-    font-size: 24px;
+    font-size: 56px;
 }
 
 header nav ul {

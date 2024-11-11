@@ -11,87 +11,202 @@ fetch("data/project-data.json")
     // Render all project cards
     updateProjectList(allProjects);
   });
+  function updateProjectList(projects) {
+    projectList.innerHTML = '';
+  
+    projects.forEach(project => {
+      const card = document.createElement("div");
+      card.classList.add("project-card");
+  
+      const image = document.createElement("img");
+      image.src = project.image;
+      image.alt = project.title;
+      card.appendChild(image);
+  
+      const title = document.createElement("h2");
+      title.textContent = project.title;
+      card.appendChild(title);
+  
+      const description = document.createElement("p");
+      description.classList.add("desc");
+      description.textContent = project.description;
+      card.appendChild(description);
+  
+      const tags = document.createElement("ul");
+      tags.classList.add("tag-list");
+      project.tags.forEach(tag => {
+        const tagItem = document.createElement("li");
+        tagItem.textContent = tag;
+        tags.appendChild(tagItem);
+      });
+  
+      const date = document.createElement("p");
+      date.classList.add("date");
+      date.textContent = project.date;
+      card.appendChild(date);
+  
+      card.appendChild(tags);
+  
+      // Create modal for project with sliding image/video/article carousel
+      const modal = document.createElement("div");
+      modal.classList.add("modal");
+  
+      modal.innerHTML = `
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>${project.title}</h2>
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <div class="left-column">
+              <div class="carousel">
+                <div class="carousel-content">
+                  ${project.media.map(media => `
+                    <div class="carousel-item" data-type="${media.type}">
+                      ${media.type === "article" 
+                        ? `
+                          <img src="${media.image}" alt="${project.title}" />
+                          <a href="${media.url}" target="_blank" class="view-article-button">View Article</a>
+                        `
+                        : `<${media.type === "video" ? "video autoplay loop muted" : "img"} src="${media.url}" 
+                            ${media.type === "video" ? "controls autoplay muted loop" : ""} 
+                            alt="${project.title}" />`
+                      }
+                    </div>`).join('')}
+                </div>
+                <div class="carousel-label">Image</div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+              </div>
+              <ul class="tag-list">
+                ${project.tags.map(tag => `<li>${tag}</li>`).join('')}
+              </ul>
+              <div class="links">
+                <a href="${project.github}" target="_blank">View on GitHub</a>
+                ${project.video ? `<a href="${project.video}" target="_blank">Watch Demo</a>` : ''}
+              </div>
+            </div>
+            <div class="right-column">
+              <p>${project.longDescription || "No detailed description available."}</p>
+            </div>
+          </div>
+        </div>
+      `;
+  
+      modalView.appendChild(modal);
+  
+      // Carousel Functionality
+      const carouselContent = modal.querySelector('.carousel-content');
+      const carouselItems = modal.querySelectorAll('.carousel-item');
+      const label = modal.querySelector('.carousel-label');
+      let currentSlide = 0;
+      let autoSlideInterval;
+  
+      function showSlide(index) {
+        currentSlide = (index + carouselItems.length) % carouselItems.length;
+        carouselContent.style.transform = `translateX(-${currentSlide * 100}%)`;
+        const type = carouselItems[currentSlide].getAttribute("data-type");
+        label.textContent = type.charAt(0).toUpperCase() + type.slice(1);
+  
+        // Set label to be clickable for articles
+        if (type === "article") {
+          label.classList.add("clickable");
+          label.onclick = () => window.open(carouselItems[currentSlide].querySelector(".view-article-button").href, "_blank");
+        } else {
+          label.classList.remove("clickable");
+          label.onclick = null;
+        }
+      }
+  
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+          showSlide(currentSlide + 1);
+        }, 5000); // Change slide every 5 seconds
+      }
+  
+      function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+      }
+  
+      modal.querySelector('.next').onclick = () => {
+        showSlide(currentSlide + 1);
+        stopAutoSlide(); // Stops auto-slide on manual control
+        startAutoSlide(); // Restart auto-slide after manual control
+      };
+      
+      modal.querySelector('.prev').onclick = () => {
+        showSlide(currentSlide - 1);
+        stopAutoSlide();
+        startAutoSlide();
+      };
+  
+      // Start auto-sliding on modal open and set up autoplay
+      card.addEventListener('click', () => {
+        modal.style.display = "flex";
+        showSlide(0); // Reset carousel on open
+        startAutoSlide();
+      });
+  
+      // Close modal and stop auto-slide
+      const close = modal.querySelector(".close");
+      close.onclick = () => {
+        modal.style.display = "none";
+        stopAutoSlide();
+      };
+  
+      projectList.appendChild(card);
+    });
+  }
+  
+const blogList = document.getElementById("blog-list");
+let allBlogs = [];
 
-function updateProjectList(projects) {
-  projectList.innerHTML = '';
+// Fetch the blog data (replace 'data/blog-data.json' with your actual data path)
+fetch("data/blog-data.json")
+  .then((response) => response.json())
+  .then((data) => {
+    allBlogs = data.blogs;
 
-  projects.forEach(project => {
+    // Render all blog cards
+    updateBlogList(allBlogs);
+  });
+
+function updateBlogList(blogs) {
+  blogList.innerHTML = '';
+
+  blogs.forEach(blog => {
     const card = document.createElement("div");
-    card.classList.add("project-card");
+    card.classList.add("blog-card");
+
+    // Make the entire card clickable by adding an event listener
+    card.addEventListener('click', () => {
+      window.open(blog.url, '_blank'); // Open the blog link in a new tab
+    });
 
     const image = document.createElement("img");
-    image.src = project.image;
-    image.alt = project.title;
+    image.src = blog.image;
+    image.alt = blog.title;
     card.appendChild(image);
 
     const title = document.createElement("h2");
-    title.textContent = project.title;
+    title.textContent = blog.title;
     card.appendChild(title);
 
     const description = document.createElement("p");
     description.classList.add("desc");
-    description.textContent = project.description;
+    description.textContent = blog.description;
     card.appendChild(description);
-
-    const tags = document.createElement("ul");
-    tags.classList.add("tag-list");
-    project.tags.forEach(tag => {
-      const tagItem = document.createElement("li");
-      tagItem.textContent = tag;
-      tags.appendChild(tagItem);
-    });
 
     const date = document.createElement("p");
     date.classList.add("date");
-    date.textContent = project.date;
+    date.textContent = blog.date;
     card.appendChild(date);
 
-    card.appendChild(tags);
-
-    // Create modal for project
-    const modal = document.createElement("div");
-    modal.classList.add("modal");
-    modal.innerHTML = `
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2>${project.title}</h2>
-          <span class="close">&times;</span>
-        </div>
-        <div class="modal-body">
-          <div class="left-column">
-            <img src="${project.image}" alt="${project.title}">
-            <ul class="tag-list">
-              ${project.tags.map(tag => `<li>${tag}</li>`).join('')}
-            </ul>
-            <div class="links">
-              <a href="${project.github}" target="_blank">View on GitHub</a>
-              ${project.video ? `<a href="${project.video}" target="_blank">Watch Demo</a>` : ''}
-            </div>
-          </div>
-          <div class="right-column">
-            <p>${project.longDescription || "No detailed description available."}</p>
-          </div>
-        </div>
-      </div>
-    `;
-
-    modalView.appendChild(modal);
-
-    // Add click event listener to display the modal
-    card.addEventListener('click', () => {
-      modal.style.display = "flex";
-    });
-
-    // Add click event listener to close the modal
-    const close = modal.querySelector(".close");
-    close.onclick = () => {
-      modal.style.display = "none";
-    };
-
-    // Append the card to the project list
-    projectList.appendChild(card);
+    // Append the card to the blog list
+    blogList.appendChild(card);
   });
 }
+
 
   const skillsContainer = document.getElementById('skills-container');
   fetch('data/skills.json')
@@ -134,20 +249,43 @@ function updateProjectList(projects) {
     });
   });
 
-// Updated background image change logic
-const aboutSection = document.querySelector('#about');
-const images = [
-  '../images/background/back.png',
-  '../images/background/back2.png'
-]; // Replace with your image paths
-let currentIndex = 0;
+// // Updated background image change logic
+// const aboutSection = document.querySelector('#about');
+// const images = [
+//   '../images/background/back.png',
+//   '../images/background/back2.png'
+// ]; // Replace with your image paths
+// let currentIndex = 0;
 
-function changeBackgroundImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  aboutSection.style.backgroundImage = `
-    linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1)),
-    url('${images[currentIndex]}')
-  `;
+// function changeBackgroundImage() {
+//   currentIndex = (currentIndex + 1) % images.length;
+//   aboutSection.style.backgroundImage = `
+//     linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1)),
+//     url('${images[currentIndex]}')
+//   `;
+// }
+
+// setInterval(changeBackgroundImage, 3000); // Change image every 3 seconds
+
+const aboutVideo = document.querySelector('#about-video');
+const videoSources = [
+    '../images/videos/aloha.mp4',
+    '../images/videos/b2.mp4',
+    '../images/videos/drne.mp4',
+    '../images/videos/autorobot.mp4',
+    '../images/videos/ariac.mp4',
+    '../images/videos/quadruped.mp4',
+    '../images/videos/auto_vehicle.mp4',
+    '../images/videos/firefly.mp4',
+    '../images/videos/drne.mp4',
+    
+]; // Replace with your actual video paths
+let videoIndex = 0;
+
+function changeBackgroundVideo() {
+    videoIndex = (videoIndex + 1) % videoSources.length;
+    aboutVideo.src = videoSources[videoIndex];
+    aboutVideo.play(); // Start playing the new video
 }
 
-setInterval(changeBackgroundImage, 3000); // Change image every 3 seconds
+setInterval(changeBackgroundVideo, 7000); // Change video every 10 seconds
