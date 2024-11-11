@@ -11,15 +11,32 @@
     overflow: hidden;
 }
 
-
-#about video {
+#about-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Fade-in transition */
     z-index: 0;
+}
+
+
+
+.about-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background/profile.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 2s ease-in-out; /* Fade-out transition */
+    z-index: 1;
 }
 
 /* Gradient Overlay */
@@ -31,13 +48,13 @@
     width: 100%;
     height: 100%; /* Ensure the gradient covers the full section */
     background: linear-gradient(to right, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.2)); /* Black gradient overlay */
-    z-index: 1; /* Place the overlay behind the content */
+    z-index: 2; /* Place the overlay behind the content */
 }
 
 /* Content in the About Section */
 .about-content {
     position: relative;
-    z-index: 2; /* Place content above the gradient */
+    z-index: 3; /* Place content above the gradient */
     max-width: 600px; /* Limit the width of the text content */
     color: var(--text-color); /* White text for readability */
 }

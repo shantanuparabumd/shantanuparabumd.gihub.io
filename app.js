@@ -249,43 +249,43 @@ function updateBlogList(blogs) {
     });
   });
 
-// // Updated background image change logic
-// const aboutSection = document.querySelector('#about');
-// const images = [
-//   '../images/background/back.png',
-//   '../images/background/back2.png'
-// ]; // Replace with your image paths
-// let currentIndex = 0;
-
-// function changeBackgroundImage() {
-//   currentIndex = (currentIndex + 1) % images.length;
-//   aboutSection.style.backgroundImage = `
-//     linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1)),
-//     url('${images[currentIndex]}')
-//   `;
-// }
-
 // setInterval(changeBackgroundImage, 3000); // Change image every 3 seconds
-
 const aboutVideo = document.querySelector('#about-video');
+const aboutImageOverlay = document.querySelector('.about-image-overlay');
 const videoSources = [
     '../images/videos/aloha.mp4',
     '../images/videos/b2.mp4',
-    '../images/videos/drne.mp4',
+    '../images/videos/robocon3.mp4',
+    '../images/videos/robocon2.mp4',
+    '../images/videos/robocon4.mp4',
+    '../images/videos/robocon5.mp4',
     '../images/videos/autorobot.mp4',
+    '../images/videos/drne.mp4',
     '../images/videos/ariac.mp4',
     '../images/videos/quadruped.mp4',
     '../images/videos/auto_vehicle.mp4',
     '../images/videos/firefly.mp4',
-    '../images/videos/drne.mp4',
-    
 ]; // Replace with your actual video paths
 let videoIndex = 0;
 
+// Function to smoothly change the video source with a fade transition
 function changeBackgroundVideo() {
-    videoIndex = (videoIndex + 1) % videoSources.length;
-    aboutVideo.src = videoSources[videoIndex];
-    aboutVideo.play(); // Start playing the new video
+  aboutVideo.style.opacity = '0'; // Fade out current video
+  setTimeout(() => {
+      videoIndex = (videoIndex + 1) % videoSources.length;
+      aboutVideo.src = videoSources[videoIndex];
+      aboutVideo.play();
+      aboutVideo.style.opacity = '1'; // Fade in new video
+  }, 1000); // Wait for fade-out transition to complete
 }
 
-setInterval(changeBackgroundVideo, 7000); // Change video every 10 seconds
+// Start with the image overlay, then fade it out and start the video slideshow
+setTimeout(() => {
+  aboutImageOverlay.style.opacity = '0'; // Fade out the image overlay
+  aboutVideo.style.opacity = '1'; // Fade in the video
+  aboutVideo.src = videoSources[videoIndex];
+  aboutVideo.play();
+
+  // Start the video slideshow with smooth transitions after the initial fade-in
+  setInterval(changeBackgroundVideo, 6000); // Interval slightly longer than video switch delay
+}, 1500); // Initial 1-second delay to display the image
