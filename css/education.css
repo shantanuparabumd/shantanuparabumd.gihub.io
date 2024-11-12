@@ -56,13 +56,13 @@
 }
 
 .education-info-left h3, .education-info-right h3 {
-    font-size: 24px;
+    font-size: 36px;
     margin-bottom: 10px;
     color: var(--secondary-color); /* Neon pink */
 }
 
 .education-info-left p, .education-info-right p {
-    font-size: 16px;
+    font-size: 24px;
     line-height: 1.6;
     color: var(--text-color); /* White text */
 }

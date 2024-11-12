@@ -1,30 +1,34 @@
 /* Work Experience Section */
 #work-experience {
-    width: 100%;
     padding: 20px;
 }
 
-/* Work Card Container */
+/* Work Cards Container */
+.work-cards {
+    width: 100%;
+}
+
+/* Work Card Styling */
 .work-card {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 350px;
+    height: 500px;
     margin: 30px 0;
     border-radius: 15px;
-    background-size: cover; /* Scale image to cover the container */
-    background-position: right center;
-    background-clip: padding-box; /* Ensures image respects border-radius */
+    background-size: contain; /* Adjust to contain logo size */
+    background-repeat: no-repeat;
+    background-position: center right; /* Image on the right for left-aligned text */
     position: relative;
     overflow: hidden;
-    color: var(--text-color);
+    background-color: black; /* Background for the dark side */
 }
 
-/* Alternate layout for reverse card */
+/* Reverse the layout for alternating cards */
 .work-card.reverse {
     justify-content: flex-end;
-    background-position: left center;
+    background-position: center left; /* Image on the left for right-aligned text */
 }
 
 /* Gradient Overlay */
@@ -35,46 +39,46 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.2));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Gradient from left to right */
     z-index: 1;
 }
 
 .work-card.reverse::before {
-    background: linear-gradient(to left, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.2));
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Gradient from right to left */
 }
 
-/* Work Content Area */
-.work-content-left, .work-content-right {
+/* Work Info */
+.work-info-left, .work-info-right {
     position: relative;
-    z-index: 2;
-    padding: 40px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    z-index: 2; /* Content above gradient */
+    padding: 30px;
+    width: 50%; /* Text takes 50% of the card */
+    color: var(--text-color); /* White text */
 }
 
-.work-content-left h3, .work-content-right h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: var(--secondary-color);
-}
-
-.work-content-left .job-title, .work-content-right .job-title {
-    font-weight: bold;
+.work-info-left h3, .work-info-right h3 {
+    font-size: 40px;
     margin-bottom: 10px;
-    color: var(--primary-color);
+    color: var(--secondary-color); /* Neon pink */
 }
 
-.work-content-left .work-description, .work-content-right .work-description {
-    margin-bottom: 15px;
+
+.work-info-left p, .work-info-right p {
+    font-size: 24px;
 }
 
-/* Work Duration Styling */
+
+.job-title {
+    color: var(--primary-color); /* Apply the primary color to job titles */
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px 0 10px; /* Add some spacing */
+}
+
 .duration {
-    font-style: italic;
-    color: var(--muted-text-color);
-    margin-top: 10px;
+    color: var(--primary-color); 
+    font-size: 18px;
+    margin: 5px 0 10px; /* Add some spacing */
 }
 
 /* Skill Tags */
@@ -85,14 +89,14 @@
 }
 
 .worktag {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: var(--secondary-color); /* Neon pink */
+    color: white;
     padding: 8px 12px;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 18px;
 }
 
-/* Ensure Responsiveness */
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .work-card {
         flex-direction: column;
@@ -103,13 +107,8 @@
         flex-direction: column;
     }
 
-    .work-content-left, .work-content-right {
+    .work-info-left, .work-info-right {
         width: 100%;
         padding: 20px;
-    }
-
-    /* Center background on small screens */
-    .work-card, .work-card.reverse {
-        background-position: center center;
     }
 }

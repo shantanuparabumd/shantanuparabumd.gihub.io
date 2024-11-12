@@ -40,7 +40,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 550px; /* Consistent card height */
+    height: 600px; /* Consistent card height */
 }
 
 .blog-card .date {
