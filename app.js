@@ -289,3 +289,21 @@ setTimeout(() => {
   // Start the video slideshow with smooth transitions after the initial fade-in
   setInterval(changeBackgroundVideo, 6000); // Interval slightly longer than video switch delay
 }, 1500); // Initial 1-second delay to display the image
+
+
+
+function openModal() {
+  document.getElementById("resumeModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("resumeModal").style.display = "none";
+}
+
+// Close the modal if the user clicks outside of it
+window.onclick = function(event) {
+  const modal = document.getElementById("resumeModal");
+  if (event.target === modal) {
+      modal.style.display = "none";
+  }
+}

@@ -52,9 +52,21 @@
 					My focus is on designing intelligent, reliable robotic systems through sophisticated reinforcement learning solutions, elevating system efficiency and dependability for real-world applications.
 					With a passion for pushing boundaries in robotics, I’m committed to transforming complex robotic challenges into streamlined, impactful solutions.
 				</p>
-				<button class="resume-button">Download Resume</button>
+				<button class="resume-button" onclick="openModal()">Get Resume</button>
+
+				<!-- Modal Structure -->
+				<div id="resumeModal" class="modal">
+					<div class="modal-content">
+						<span class="close" onclick="closeModal()">&times;</span>
+						<h2>Request My Resume</h2>
+						<iframe src="https://forms.gle/txUmUzbEL748WhF4A" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+							Loading…
+						</iframe>
+					</div>
+				</div>
 			</div>
 		</section>
+
 		 
 		<section id="work-experience">
 			<hr>
@@ -203,6 +215,7 @@
 			
 		  </section>
 
+		  
 		  <section id="contact">
 			<hr>
 			<br>
