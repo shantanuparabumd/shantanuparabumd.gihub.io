@@ -35,7 +35,7 @@
       "tags": ["ROS", "Gazebo", "SolidWorks", "Inverse Kinematics", "URDF", "Python"],
       "github": "https://github.com/shantanuparabumd/quad_robo",
       "video": "",
-      "date": "October 2024",
+      "date": "November 2023",
       "longDescription": "In this project, I designed a Quadruped Robot from the ground up using SolidWorks, converted it to URDF for ROS integration, and simulated it in Gazebo. Key highlights include the detailed design in SolidWorks, URDF conversion for seamless ROS integration, implementation of inverse kinematics using DH parameters and Jacobian methods, and robust ROS communication for controlling the robot’s movements. Additionally, I developed a Python script for interactive control of the robot, making it versatile and user-friendly in the simulation environment. This project showcases my skills in Robot Modelling, Simulation, and ROS, providing valuable experience with Gazebo and Python control systems.",
       "media": [
         {
@@ -137,7 +137,7 @@
       "tags": ["Python", "PointNet", "NeRF", "3D Vision", "Computer Vision", "Machine Learning"],
       "github": "https://github.com/shantanuparabumd/assignment3_sparab",
       "video": "",
-      "date": "December 2023",
+      "date": "February 2023",
       "longDescription": "This project combined two advanced techniques in 3D vision: Point Cloud Classification using PointNet and 3D Model Generation with Neural Radiance Fields (NeRF). PointNet was employed to classify point clouds into categories like chairs, vases, and lamps, while also segmenting chairs into specific sections. The project analyzed the effects of point cloud density and object rotation on classification accuracy, highlighting significant drops in accuracy with reduced density and extreme rotations. Additionally, the NeRF model was implemented to reconstruct a 3D model of a Lego bulldozer with high detail. By leveraging neural networks to predict radiance and capture intricate geometry, the project demonstrated practical applications of NeRF in generating realistic 3D models. Experiments with different training epochs underscored the impact of model optimization for realistic renderings. This project emphasizes expertise in 3D vision, point cloud analysis, and neural network-based 3D modeling, showcasing proficiency in translating complex theories into effective applications.",
       "media": [
         {
@@ -161,7 +161,7 @@
       "tags": ["ROS2", "C++", "OpenCV", "Firefly Algorithm", "Swarm Intelligence"],
       "github": "https://github.com/shantanuparabumd/firefly_swarm",
       "video": "",
-      "date": "December 2022",
+      "date": "October 2023",
       "longDescription": "This project explores swarm robotics through a bio-inspired decision-making algorithm based on the Firefly Algorithm, implemented within the Gazebo simulation environment using ROS2. Using Turtle robots with camera sensors and IMUs, the system identifies colored objects and builds a global map, demonstrating intelligent collective behavior. Each robot locates objects with OpenCV and uses the Firefly algorithm to simulate attraction based on intensity and distance, causing robots to cluster near objects of interest. This approach illustrates the application of swarm intelligence in tasks such as search and rescue, where robots gather and navigate collaboratively. The project successfully showcases the Firefly algorithm's potential for swarm-based decision-making and object localization in simulated environments, expanding its use beyond traditional optimization problems.",
       "media": [
         {

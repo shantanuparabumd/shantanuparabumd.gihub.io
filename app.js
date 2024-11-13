@@ -2,15 +2,23 @@ const projectList = document.getElementById("project-list");
 const modalView = document.getElementById("modal-view");
 let allProjects = [];
 
-// Fetch the project data (you can replace 'data/project-data.json' with your actual data path)
 fetch("data/project-data.json")
   .then((response) => response.json())
   .then((data) => {
     allProjects = data.projects;
 
+    // Sort projects by date from latest to oldest
+    allProjects.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateB - dateA; // Compare in descending order
+    });
+
     // Render all project cards
     updateProjectList(allProjects);
   });
+
+
   function updateProjectList(projects) {
     projectList.innerHTML = '';
   
@@ -157,15 +165,19 @@ fetch("data/project-data.json")
       projectList.appendChild(card);
     });
   }
-  
-const blogList = document.getElementById("blog-list");
+  const blogList = document.getElementById("blog-list");
 let allBlogs = [];
 
 // Fetch the blog data (replace 'data/blog-data.json' with your actual data path)
 fetch("data/blog-data.json")
   .then((response) => response.json())
   .then((data) => {
-    allBlogs = data.blogs;
+    // Parse and sort the blogs by date (latest to oldest)
+    allBlogs = data.blogs.sort((a, b) => {
+      const dateA = new Date(`${a.date} 01`); // Add day to parse date
+      const dateB = new Date(`${b.date} 01`);
+      return dateB - dateA; // Sort in descending order
+    });
 
     // Render all blog cards
     updateBlogList(allBlogs);
