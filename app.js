@@ -319,3 +319,51 @@ window.onclick = function(event) {
       modal.style.display = "none";
   }
 }
+
+// Select elements
+const aboutContent = document.querySelector('.about-content');
+const workCards = document.querySelectorAll('.work-card');
+
+// Check if element is in view
+function isElementInView(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+}
+
+// Handle scroll with combined logic for both aboutContent and workCards
+function handleScroll() {
+    // Handle .about-content visibility
+    if (isElementInView(aboutContent)) {
+        aboutContent.classList.add('in-view');
+        aboutContent.classList.remove('out-of-view');
+    } else {
+        aboutContent.classList.remove('in-view');
+        aboutContent.classList.add('out-of-view');
+    }
+
+    // Handle each .work-card visibility
+    workCards.forEach(card => {
+        if (isElementInView(card)) {
+            card.classList.add('in-view');
+        } else {
+            card.classList.remove('in-view');
+        }
+    });
+}
+
+// Throttle function to limit the frequency of scroll events
+function throttle(fn, delay) {
+    let lastCall = 0;
+    return function (...args) {
+        const now = new Date().getTime();
+        if (now - lastCall < delay) return;
+        lastCall = now;
+        return fn(...args);
+    };
+}
+
+// Add throttled scroll event listener
+window.addEventListener('scroll', throttle(handleScroll, 100));

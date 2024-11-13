@@ -51,12 +51,27 @@
     z-index: 2; /* Place the overlay behind the content */
 }
 
-/* Content in the About Section */
+/* Initial state - off-screen to the left */
 .about-content {
     position: relative;
-    z-index: 3; /* Place content above the gradient */
-    max-width: 600px; /* Limit the width of the text content */
-    color: var(--text-color); /* White text for readability */
+    z-index: 3;
+    max-width: 600px;
+    color: var(--text-color);
+    opacity: 0;
+    transform: translateX(-100px); /* Start slightly off-screen */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Class to slide in when in view */
+.about-content.in-view {
+    opacity: 1;
+    transform: translateX(0); /* Slide into view */
+}
+
+/* Class to slide back out when scrolled away */
+.about-content.out-of-view {
+    opacity: 0;
+    transform: translateX(-100px); /* Slide back out to the left */
 }
 
 /* About Content - Heading */
