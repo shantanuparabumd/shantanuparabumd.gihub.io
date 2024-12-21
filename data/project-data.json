@@ -131,24 +131,34 @@
 
     {
       "id": 6,
-      "title": "3D Vision - Point Cloud Classification and NeRF Modeling",
-      "image": "images/project/lego.gif",
+      "title": "Point Cloud Classification",
+      "image": "images/project/pred_sample_1 (1).gif",
       "description": "Explored advanced 3D vision techniques for point cloud classification using PointNet and 3D model generation using NeRF.",
-      "tags": ["Python", "PointNet", "NeRF", "3D Vision", "Computer Vision", "Machine Learning"],
-      "github": "https://github.com/shantanuparabumd/assignment3_sparab",
+      "tags": ["Python", "PointNet", "3D Vision", "Computer Vision"],
+      "github": "https://github.com/shantanuparabumd/assignment4_sparab",
       "video": "",
-      "date": "February 2023",
-      "longDescription": "This project combined two advanced techniques in 3D vision: Point Cloud Classification using PointNet and 3D Model Generation with Neural Radiance Fields (NeRF). PointNet was employed to classify point clouds into categories like chairs, vases, and lamps, while also segmenting chairs into specific sections. The project analyzed the effects of point cloud density and object rotation on classification accuracy, highlighting significant drops in accuracy with reduced density and extreme rotations. Additionally, the NeRF model was implemented to reconstruct a 3D model of a Lego bulldozer with high detail. By leveraging neural networks to predict radiance and capture intricate geometry, the project demonstrated practical applications of NeRF in generating realistic 3D models. Experiments with different training epochs underscored the impact of model optimization for realistic renderings. This project emphasizes expertise in 3D vision, point cloud analysis, and neural network-based 3D modeling, showcasing proficiency in translating complex theories into effective applications.",
+      "date": "December 2023",
+      "longDescription": "This project implements PointNet for 3D object classification and segmentation tasks using point cloud data. The classification model achieves a high test accuracy of 97.9%, while the segmentation model achieves 90.26% accuracy, both trained over 250 epochs. Robustness analysis reveals that reducing the number of points degrades performance due to loss of critical features, while extreme rotations cause misclassifications due to unseen orientations during training. Quantitative and qualitative results highlight the models' strengths in capturing object geometries, with noted challenges in distinguishing similar shapes like lamps and vases or handling densely packed components in segmentation tasks.",
       "media": [
         {
-          "type": "article",
-          "image": "images/project/pointnet.gif",
-          "url": "https://github.com/shantanuparabumd/assignment4_sparab"
+          "type": "image",
+          "url": "images/project/classification_515_gt_chair_pred_chair.gif"
         },
         {
-          "type": "article",
-          "image": "images/project/lego.gif",
-          "url": "https://github.com/shantanuparabumd/assignment3_sparab"
+          "type": "image",
+          "url": "images/project/classification_631_gt_vase_pred_vase.gif"
+        },
+        {
+          "type": "image",
+          "url": "images/project/classification_673_gt_vase_pred_lamp.gif"
+        },
+        {
+          "type": "image",
+          "url": "images/project/pred_sample_1.gif"
+        },
+        {
+          "type": "image",
+          "url": "images/project/pred_sample_2.gif"
         }
       ]
     },    
@@ -200,6 +210,118 @@
           "type": "article",
           "image": "images/blogs/contruct.jpeg",
           "url": "https://www.linkedin.com/feed/update/urn:li:activity:7210220325630877696/"
+        }
+      ]
+    },
+
+    {
+      "id": 9,
+      "title": "Path Planning for Non-Holonomic Robots",
+      "image": "images/project/path.png",
+      "description": "Implemented Dubins curves and A* search algorithms in Python, tested with weighted A* and Dijkstra's, and validated using a ROS1 node on a TurtleBot3 in Gazebo.",
+      "tags": ["ROS2", "Gazebo", "C++", "Simulation", "Path Planning"],
+      "github": "https://github.com/VKSingh03/astar_turtlebot_ros_noetic",
+      "video": "",
+      "date": "March 2023",
+      "longDescription": "Developed a motion planning system for a robot simulating car-like forward motion using the concept of Dubins curves to generate feasible action sets for trajectory simulation. Implemented the A* search algorithm from scratch in Python to find optimal paths, along with comparative studies of weighted A* and Dijkstra's algorithms to evaluate their performance and efficiency. The solution was integrated into a ROS1 framework, where a custom ROS node was developed to simulate and test the algorithms on a TurtleBot3 within a Gazebo environment, ensuring realistic evaluation of motion planning and pathfinding strategies.",
+      "media": [
+        {
+          "type": "video",
+          "url": "images/videos/turtlebot_pp.mp4"
+        },
+        {
+          "type": "video",
+          "url": "images/videos/turtlebot_pp2.mp4"
+        }
+      ]
+    },
+
+    {
+      "id": 10,
+      "title": "Advancing Esports Analytics using CNN and LSTM",
+      "image": "images/project/valorant.jpg",
+      "description": "Designed a CNN + LSTM Neural network to do live win prediction for the Valorant video game.",
+      "tags": ["Pytorch", "Computer Vision", "CNN", "LSTM"],
+      "github": "https://github.com/VKSingh03/astar_turtlebot_ros_noetic",
+      "video": "",
+      "date": "December 2023",
+      "longDescription": "Developed a deep learning framework for predicting match outcomes in the game Valorant by leveraging a combination of Convolutional Neural Networks (CNNs) and Long Short-Term Memory (LSTM) networks. The CNNs were utilized to extract and analyze critical in-game visual elements, while the LSTMs captured and interpreted temporal patterns essential for understanding the flow of the game. As no pre-existing dataset matched the project requirements, a custom dataset was meticulously created from competition videos, ensuring a rich and diverse data source. The model was rigorously trained and tested, achieving a prediction accuracy that surpassed previously attainable benchmarks, demonstrating the effectiveness of the integrated CNN-LSTM approach in capturing both spatial and temporal dynamics of the game. This project was conducted as part of a course to explore the intersection of deep learning and e-sports analytics.",
+      "media": [
+        {
+          "type": "article",
+          "image": "images/project/valorant.jpg",
+          "url": "images/reports/enmp809k_project_report.pdf"
+        }
+      ]
+    },
+
+    {
+      "id": 11,
+      "title": "Neural Implicit Representation based SLAM techniques",
+      "image": "images/project/nerf.png",
+      "description": "Did a comparative study of five prominent neural SLAM methods—iMap, NICE-SLAM, Co-SLAM, Nerf SLAM, and vMAP",
+      "tags": ["Pytorch", "Computer Vision", "CNN", "LSTM"],
+      "github": "https://github.com/VKSingh03/astar_turtlebot_ros_noetic",
+      "video": "",
+      "date": "December 2023",
+      "longDescription": "Developed a deep learning framework for predicting match outcomes in the game Valorant by leveraging a combination of Convolutional Neural Networks (CNNs) and Long Short-Term Memory (LSTM) networks. The CNNs were utilized to extract and analyze critical in-game visual elements, while the LSTMs captured and interpreted temporal patterns essential for understanding the flow of the game. As no pre-existing dataset matched the project requirements, a custom dataset was meticulously created from competition videos, ensuring a rich and diverse data source. The model was rigorously trained and tested, achieving a prediction accuracy that surpassed previously attainable benchmarks, demonstrating the effectiveness of the integrated CNN-LSTM approach in capturing both spatial and temporal dynamics of the game. This project was conducted as part of a course to explore the intersection of deep learning and e-sports analytics.",
+      "media": [
+        {
+          "type": "article",
+          "image": "images/images/nerf.png",
+          "url": "images/reports/cmsc848f_project_report.pdf"
+        }
+      ]
+    },
+
+    {
+      "id": 12,
+      "title": "Single View Image to 3D",
+      "image": "images/project/mesh_render.gif",
+      "description": "Developed a pipeline to reconstruct 3D objects from single-view images using voxel grids, point clouds, and meshes, employing custom decoders, hyperparameter tuning, and iterative visualizations for enhanced understanding and performance.",
+      "tags": ["Pytorch", "Computer Vision", "3D Vision"],
+      "github": "https://github.com/shantanuparabumd/assignment_2_sparab",
+      "video": "",
+      "date": "October 2023",
+      "longDescription": "This project reconstructs 3D objects from single-view images using voxel grids, point clouds, and meshes. Loss functions like Binary Cross Entropy, Chamfer Loss, and smoothness loss ensure accurate fitting. By tuning hyperparameters such as batch size and increasing training workers, the pipeline achieves improved convergence and efficient performance. Visualizations across iterations showcase how reconstructions evolve from uniform shapes to detailed 3D models. Quantitative evaluations highlight point cloud and mesh methods as superior in capturing fine details compared to voxels, which face memory constraints. The study emphasizes iterative visualization and optimized training for effective 3D reconstruction.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/project/voxel_render.gif"
+        },
+        {
+          "type": "image",
+          "url": "images/project/point_render.gif"
+        },
+        {
+          "type": "image",
+          "url": "images/project/mesh_gt_batch16_instance2.gif"
+        },
+        {
+          "type": "image",
+          "url": "images/project/mesh_gt_batch16_instance8.gif"
+        },
+        {
+          "type": "image",
+          "url": "images/project/mesh_gt_batch16_instance8 (1).gif"
+        }
+      ]
+    },
+
+    {
+      "id": 12,
+      "title": "NeRF Rendering",
+      "image": "images/project/lego.gif",
+      "description": "Implemented a pipeline for Neural Radiance Fields (NeRF) using differentiable volume rendering, ray sampling, and optimization techniques to generate 3D scene representations and realistic renderings.",
+      "tags": ["Pytorch", "Computer Vision", "CNN", "LSTM"],
+      "github": "https://github.com/shantanuparabumd/assignment3_sparab",
+      "video": "",
+      "date": "November 2023",
+      "longDescription": "This project implements a Neural Radiance Field (NeRF) pipeline using differentiable volume rendering to create realistic 3D scene representations. It includes ray sampling to map pixels to world-space rays, point sampling to stratify along rays, and volume rendering to aggregate weights and compute depth maps. The pipeline optimizes a 3D implicit volume to reconstruct a box with known ground truth images and trains a neural radiance field for realistic scene renderings. Progressive visualizations highlight improvements over epochs, showcasing depth maps, point clouds, and final rendered images. The project leverages PyTorch3D and references advanced resources for a robust exploration of neural 3D modeling.",
+      "media": [
+        {
+          "type": "image",
+          "url": "images/project/lego.gif"
         }
       ]
     }
